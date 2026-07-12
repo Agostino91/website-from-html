@@ -1172,6 +1172,18 @@ footer {
   color: var(--ink-faint);
   font-style: italic;
 }
+.qs-field .val {
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+.qs-field select.val {
+  appearance: none;
+  -webkit-appearance: none;
+}
 .qs-submit {
   background: var(--ink);
   color: var(--bg);

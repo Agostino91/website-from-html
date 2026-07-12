@@ -24,7 +24,7 @@ export function SiteNav({
 
   useEffect(() => {
     if (variant !== "overlay") return
-    const hero = document.querySelector(".hero")
+    const hero = document.querySelector(".hero, .exp-hero")
     if (!hero) return
     const onScroll = () => {
       const bottom = hero.getBoundingClientRect().bottom

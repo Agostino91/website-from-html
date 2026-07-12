@@ -1,0 +1,66 @@
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { SiteNav } from "@/components/site-nav"
+import { SiteFooter } from "@/components/site-footer"
+import { experiences, type ExpCard } from "@/lib/content/experiences"
+import { isLocale, type Locale } from "@/lib/i18n"
+
+function Card({ card, lang }: { card: ExpCard; lang: Locale }) {
+  const href = card.slug === "#" ? "#" : `/${lang}/experiences/${card.slug}`
+  return (
+    <Link href={href} className="exp-card">
+      <div className="exp-card-img-wrap">
+        <div className="exp-card-img" style={{ backgroundImage: `url('${card.img}')` }} />
+      </div>
+      <div className="exp-card-num">{card.num}</div>
+      <div className="exp-card-name">{card.name}</div>
+      <div className="exp-card-meta">{card.meta}</div>
+      <span className="exp-card-link">{lang === "it" ? "Scopri →" : "Discover →"}</span>
+    </Link>
+  )
+}
+
+export default async function ExperiencesPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  if (!isLocale(lang)) notFound()
+  const c = experiences[lang]
+
+  return (
+    <>
+      <SiteNav locale={lang} variant="solid" />
+
+      <section className="page-header">
+        <div className="eyebrow">{c.eyebrow}</div>
+        <h1>{c.title}</h1>
+        <p>{c.intro}</p>
+      </section>
+
+      <div className="section-label">{c.onEstateLabel}</div>
+      <section className="grid-4">
+        {c.onEstate.map((card) => (
+          <Card key={card.name} card={card} lang={lang} />
+        ))}
+      </section>
+
+      <div className="section-label">{c.inRegionLabel}</div>
+      <section className="grid-4">
+        {c.inRegion.map((card) => (
+          <Card key={card.name} card={card} lang={lang} />
+        ))}
+      </section>
+
+      <section className="arrange">
+        <div className="arrange-inner">
+          <div className="eyebrow">{c.arrangeEyebrow}</div>
+          <h2>{c.arrangeTitle}</h2>
+          <p>{c.arrangeText}</p>
+          <Link href={`/${lang}/contact`} className="btn-primary">
+            {c.arrangeCta}
+          </Link>
+        </div>
+      </section>
+
+      <SiteFooter locale={lang} />
+    </>
+  )
+}
