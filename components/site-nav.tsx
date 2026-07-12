@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
-import { ArchLogo } from "@/components/arch-logo"
 import { chrome, type Locale } from "@/lib/i18n"
 
 /**
@@ -43,7 +42,7 @@ export function SiteNav({
         {t.menu}
       </Link>
       <Link href={`/${locale}`} className="nav-logo" aria-label="Lama di Luna">
-        <ArchLogo />
+        <span className="brand-mark" aria-hidden="true" />
         <div className="logo-text">Lama di Luna</div>
       </Link>
       <Link href={`/${locale}/book`} className="nav-side">
