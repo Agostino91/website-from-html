@@ -942,9 +942,6 @@ section {
 }
 
 /* ---------------- 2-UP PHOTO SPLIT ---------------- */
-.v0-css-marker {
-  color: #123456;
-}
 .photo-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
