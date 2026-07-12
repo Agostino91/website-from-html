@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Experiences at Lama di Luna · Olive harvest, cooking, Puglia day trips</title>
+<meta name="description" content="Eight experiences at and around Lama di Luna — olive harvest, Puglian cooking class, wine tasting, dawn walks in the groves, plus day trips to Alberobello, Castel del Monte, Polignano and Matera." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F6F1E6; --bg-alt: #ECE5D2; --ink: #1E3A5F;
+    --ink-soft: rgba(30, 58, 95, 0.7); --olive: #6B7A4B; --sand: #D9C9A9;
+    --line: rgba(30, 58, 95, 0.18);
+    --serif: 'Lora', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  ::selection { background: var(--ink); color: var(--bg); }
+  body {
+    font-family: var(--serif); font-size: 14px; line-height: 1.7;
+    color: var(--ink); background: var(--bg);
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 70px; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem; pointer-events: none;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .nav > * { pointer-events: auto; }
+  .nav-side {
+    font-family: var(--serif); font-size: 12px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--ink); font-weight: 500;
+    cursor: pointer; background: none; border: none;
+  }
+  .nav-side:hover { opacity: 0.7; }
+  .nav-logo {
+    position: absolute; left: 50%; transform: translateX(-50%); top: 14px;
+    color: var(--ink); text-align: center;
+  }
+  .nav-logo svg { width: 44px; height: auto; }
+  .nav-logo .logo-text {
+    font-family: var(--serif); font-size: 10px; letter-spacing: 0.35em;
+    text-transform: uppercase; margin-top: 4px; font-weight: 500;
+  }
+
+  .page-header {
+    padding: 11rem 2.5rem 4rem;
+    text-align: center;
+    max-width: 900px; margin: 0 auto;
+  }
+  .page-header .eyebrow {
+    font-family: var(--serif); font-style: italic;
+    font-size: 17px; color: var(--olive); margin-bottom: 0.8rem;
+  }
+  .page-header h1 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(2.8rem, 6vw, 5.4rem);
+    line-height: 1.05; letter-spacing: -0.025em;
+    text-transform: uppercase; color: var(--ink); margin-bottom: 1.5rem;
+  }
+  .page-header p {
+    font-size: 16px; line-height: 1.85;
+    color: var(--ink-soft); max-width: 640px; margin: 0 auto;
+    font-style: italic;
+  }
+
+  .section-label {
+    text-align: center; padding: 4rem 0 2.5rem;
+    font-family: var(--serif); font-size: 11px;
+    letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--olive);
+    position: relative;
+  }
+  .section-label::before, .section-label::after {
+    content: ''; display: inline-block;
+    width: 60px; height: 1px; background: var(--olive);
+    vertical-align: middle; margin: 0 1.5rem; opacity: 0.6;
+  }
+
+  .grid-4 {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1500px; margin: 0 auto 4rem; padding: 0 2.5rem;
+  }
+  .exp-card {
+    cursor: pointer; transition: transform 0.3s ease;
+  }
+  .exp-card-img-wrap { overflow: hidden; }
+  .exp-card-img {
+    width: 100%; aspect-ratio: 4/5;
+    background-size: cover; background-position: center;
+    transition: transform 0.7s ease;
+    margin-bottom: 1.2rem;
+  }
+  .exp-card:hover .exp-card-img { transform: scale(1.03); }
+  .exp-card-num {
+    font-family: var(--serif); font-style: italic;
+    font-size: 13px; color: var(--olive);
+    margin-bottom: 0.3rem;
+  }
+  .exp-card-name {
+    font-family: var(--serif); font-size: 19px; font-weight: 600;
+    color: var(--ink); margin-bottom: 0.4rem;
+    letter-spacing: 0.3px;
+  }
+  .exp-card-meta {
+    font-size: 13px; line-height: 1.55; color: var(--ink-soft);
+    margin-bottom: 0.7rem; font-style: italic;
+  }
+  .exp-card-link {
+    font-family: var(--serif); font-size: 11px;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--olive);
+  }
+
+  .arrange {
+    background: var(--ink); color: var(--bg);
+    padding: 7rem 2.5rem; text-align: center;
+    position: relative; overflow: hidden;
+    margin-top: 4rem;
+  }
+  .arrange::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_2000,q_auto:good,f_auto,c_fill/v1748365479/bao85el3tzzrazwmnjtl.jpg');
+    background-size: cover; background-position: center;
+    opacity: 0.18; z-index: 0;
+  }
+  .arrange-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .arrange .eyebrow {
+    font-family: var(--serif); font-style: italic; font-size: 17px;
+    color: var(--sand); margin-bottom: 0.6rem;
+  }
+  .arrange h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05; letter-spacing: -0.02em;
+    text-transform: uppercase; margin-bottom: 1.4rem; color: var(--bg);
+  }
+  .arrange p { font-size: 16px; color: rgba(246, 241, 230, 0.85); margin-bottom: 2.5rem; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 1rem;
+    background: var(--sand); color: var(--ink); border: none;
+    padding: 1.2rem 2.6rem;
+    font-family: var(--serif); font-size: 12px;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    font-weight: 500; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--bg); transform: translateY(-1px); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2rem 2.5rem 1.5rem;
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-links { display: flex; gap: 1.8rem; }
+  .footer-right { display: flex; gap: 1.8rem; align-items: center; opacity: 0.85; }
+
+  .lang-pill {
+    position: fixed; left: 1.4rem; bottom: 1.4rem; z-index: 50;
+    background: var(--ink); color: var(--bg);
+    border-radius: 50%; width: 46px; height: 46px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; letter-spacing: 0.15em; font-weight: 600;
+    cursor: pointer; box-shadow: 0 6px 18px rgba(30, 58, 95, 0.25);
+  }
+  .lang-pill:hover { background: #142845; }
+
+  @media print {
+    @page { size: 1440px auto; margin: 0; }
+    .lang-pill { display: none !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+  @media (max-width: 900px) {
+    .nav { padding: 0 1rem; height: 60px; }
+    .nav-logo { top: 9px; }
+    .nav-logo svg { width: 36px; }
+    .nav-logo .logo-text { font-size: 9px; }
+    .page-header { padding: 7rem 1.3rem 2.5rem; }
+    .grid-4 { grid-template-columns: 1fr; padding: 0 1.3rem; gap: 2.5rem; }
+    .section-label { padding: 3rem 0 2rem; font-size: 10px; letter-spacing: 0.32em; }
+    .section-label::before, .section-label::after { width: 30px; margin: 0 0.8rem; }
+    .arrange { padding: 4.5rem 1.3rem; }
+    footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.3rem; }
+  }
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <button class="nav-side">Menu</button>
+  <a href="mockup-homepage-en.html" class="nav-logo" aria-label="Lama di Luna">
+    <svg viewBox="0 0 64 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 32 V18 A10 10 0 0 1 20 18 V32" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M22 32 V14 A12 12 0 0 1 42 14 V32" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M44 32 V18 A10 10 0 0 1 60 18 V32" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="0" y1="34" x2="64" y2="34" stroke="currentColor" stroke-width="1.4"/>
+    </svg>
+    <div class="logo-text">Lama di Luna</div>
+  </a>
+  <button class="nav-side">Prenota</button>
+</nav>
+
+<section class="page-header">
+  <div class="eyebrow">Eight ways to spend a day</div>
+  <h1>Experiences</h1>
+  <p>Four at the masseria, four within an hour's drive. Olive harvest, a cooking class, the wine, the dawn walk — and the trulli, the cliffs, the cave city, the castle on the hill.</p>
+</section>
+
+<div class="section-label">On the Estate</div>
+
+<section class="grid-4">
+  <a href="mockup-experience-olive-harvest-en.html" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748888083/omou7cxhd8opgelkbeuz.jpg');"></div>
+    </div>
+    <div class="exp-card-num">01 · October–November</div>
+    <div class="exp-card-name">The Olive Harvest</div>
+    <div class="exp-card-meta">Walk the groves at dawn, watch the cold press, taste the first oil of the year on warm bread.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+  <a href="#" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748888055/nxskbhvgtpuxzfoqavfb.jpg');"></div>
+    </div>
+    <div class="exp-card-num">02 · Half-day, on request</div>
+    <div class="exp-card-name">Orecchiette &amp; Focaccia</div>
+    <div class="exp-card-meta">A cooking class with our resident cook — orecchiette pasta and Pugliese focaccia, made by hand at the masseria kitchen.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+  <a href="#" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748365479/bao85el3tzzrazwmnjtl.jpg');"></div>
+    </div>
+    <div class="exp-card-num">03 · Two hours, by arrangement</div>
+    <div class="exp-card-name">Wine of the Murgia</div>
+    <div class="exp-card-meta">A tasting of the estate's own wine alongside the great wines of Puglia — Primitivo, Negroamaro, Nero di Troia.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+  <a href="#" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1679928579/czk5bwys9xduwfefummm.jpg');"></div>
+    </div>
+    <div class="exp-card-num">04 · 90 min, at sunrise</div>
+    <div class="exp-card-name">Dawn Walk in the Groves</div>
+    <div class="exp-card-meta">A guided walk through the olive rows at first light, with the kestrels and the small owls of the Murgia. Coffee on return.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+</section>
+
+<div class="section-label">In the Region</div>
+
+<section class="grid-4">
+  <a href="#" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1679928582/brqp64y9q5oogzmppcja.jpg');"></div>
+    </div>
+    <div class="exp-card-num">05 · 15 min drive</div>
+    <div class="exp-card-name">Castel del Monte</div>
+    <div class="exp-card-meta">Frederick II's octagonal 13th-century castle, a UNESCO site on the next hill over. Self-drive or arranged transfer.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+  <a href="#" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1747243212/wj7lc1n5p7gpmqnwredd.jpg');"></div>
+    </div>
+    <div class="exp-card-num">06 · 1h 10 min drive</div>
+    <div class="exp-card-name">Alberobello &amp; the Trulli</div>
+    <div class="exp-card-meta">The conical-roofed trulli of the Valle d'Itria — the UNESCO town and the smaller hamlets few visitors find.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+  <a href="#" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1679928587/vt7xxd7g2xxn5sqk3mkt.jpg');"></div>
+    </div>
+    <div class="exp-card-num">07 · 1 h drive</div>
+    <div class="exp-card-name">Polignano a Mare</div>
+    <div class="exp-card-meta">Cliffs over the Adriatic, the cave bar, the long lunch overlooking the sea. The most cinematic beach town in Puglia.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+  <a href="#" class="exp-card">
+    <div class="exp-card-img-wrap">
+      <div class="exp-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1679928110/vw8ib8dqkcchw9nqco39.jpg');"></div>
+    </div>
+    <div class="exp-card-num">08 · 1h 20 min drive</div>
+    <div class="exp-card-name">Matera</div>
+    <div class="exp-card-meta">The cave city, the sassi, the rock churches. Where Stanley Tucci filmed; where Mel Gibson filmed; where you'll never forget you were.</div>
+    <span class="exp-card-link">Discover →</span>
+  </a>
+</section>
+
+<section class="arrange">
+  <div class="arrange-inner">
+    <div class="eyebrow">Tell us what you'd love</div>
+    <h2>We'll arrange the day</h2>
+    <p>All experiences are arranged on request. Many are weather- or season-dependent; some need a few days' notice. Drop us a note with your dates and what you're drawn to.</p>
+    <a href="mockup-contact-en.html" class="btn-primary">Get in touch</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Tripadvisor</a>
+    <a href="#">Privacy</a><a href="#">Cookies</a>
+  </div>
+  <div class="footer-right">
+    <span>CIN: IT110001B500020950</span>
+    <span>© 2026 Lama di Luna · Andria, BT</span>
+  </div>
+</footer>
+
+<div class="lang-pill" id="langPill">EN</div>
+
+<script>
+  const langs = ['EN','IT','DE','FR']; let li = 0;
+  const pill = document.getElementById('langPill');
+  pill.addEventListener('click', () => { li = (li+1) % langs.length; pill.textContent = langs[li]; });
+</script>
+
+</body>
+</html>
