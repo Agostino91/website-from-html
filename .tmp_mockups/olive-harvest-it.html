@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Raccolta delle Olive · Lama di Luna · Degustazione olio nuovo in Puglia</title>
+<meta name="description" content="Partecipa alla raccolta delle olive a Lama di Luna — da ottobre a novembre, cammina tra gli uliveti, osserva la spremitura a freddo, assaggia il primo olio dell'anno. Tenuta biologica certificata AIAB-ICEA in Puglia." />
+<link rel="canonical" href="https://www.lamadiluna.com/it/esperienze/raccolta-olive" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F6F1E6; --bg-alt: #ECE5D2; --ink: #1E3A5F;
+    --ink-soft: rgba(30, 58, 95, 0.7); --olive: #6B7A4B; --sand: #D9C9A9;
+    --line: rgba(30, 58, 95, 0.18); --serif: 'Lora', Georgia, serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--serif); font-size: 14px; line-height: 1.7;
+    color: var(--ink); background: var(--bg);
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 70px; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem; pointer-events: none;
+  }
+  .nav > * { pointer-events: auto; }
+  .nav-side {
+    font-family: var(--serif); font-size: 12px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--bg); font-weight: 500;
+    cursor: pointer; background: none; border: none;
+    transition: color 0.3s ease;
+  }
+  .nav-side:hover { opacity: 0.7; }
+  .nav-logo {
+    position: absolute; left: 50%; transform: translateX(-50%); top: 14px;
+    color: var(--bg); text-align: center;
+  }
+  .nav-logo svg { width: 44px; height: auto; }
+  .nav-logo .logo-text {
+    font-family: var(--serif); font-size: 10px; letter-spacing: 0.35em;
+    text-transform: uppercase; margin-top: 4px; font-weight: 500;
+  }
+  .nav.over-light .nav-side, .nav.over-light .nav-logo { color: var(--ink); }
+  .nav.over-light .nav-logo svg path { stroke: var(--ink); }
+
+  .exp-hero {
+    height: 95vh; min-height: 600px; position: relative;
+    background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_2400,q_auto:best,f_auto,c_fill/v1748888083/omou7cxhd8opgelkbeuz.jpg');
+    background-size: cover; background-position: center;
+  }
+  .exp-hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 35%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.4) 100%);
+  }
+  .exp-counter {
+    position: absolute; top: 90px; left: 2.5rem; z-index: 3;
+    color: var(--bg); font-family: var(--serif);
+    font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .exp-counter::before {
+    content: ''; display: inline-block; width: 28px; height: 1px;
+    background: rgba(246,241,230,0.8);
+  }
+  .exp-breadcrumb {
+    position: absolute; top: 90px; right: 2.5rem; z-index: 3;
+    color: var(--bg); font-family: var(--serif);
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.6rem; opacity: 0.85;
+  }
+  .exp-breadcrumb a:hover { opacity: 0.7; }
+  .exp-hero-title {
+    position: absolute; left: 2.5rem; right: 2.5rem; bottom: 4rem; z-index: 3;
+    color: var(--bg); max-width: 900px;
+  }
+  .exp-hero-eyebrow {
+    font-family: var(--serif); font-style: italic;
+    font-size: 17px; color: var(--sand); margin-bottom: 0.4rem;
+  }
+  .exp-hero-title h1 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1; letter-spacing: -0.025em;
+    text-transform: uppercase;
+  }
+
+  .statement {
+    padding: 10vh 0 6vh;
+  }
+  .statement-grid {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 5rem;
+    align-items: start;
+    max-width: 1500px; margin: 0 auto; padding: 0 2.5rem;
+  }
+  .statement-grid h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    line-height: 1.15; letter-spacing: -0.02em;
+    text-transform: uppercase; color: var(--ink); margin-bottom: 1.6rem;
+  }
+  .statement-body {
+    font-size: 15px; line-height: 1.85; color: var(--ink);
+  }
+  .statement-body p { margin-bottom: 1rem; }
+
+  /* QUICK FACTS */
+  .facts {
+    display: grid; grid-gap: 1.2rem 1.5rem; grid-template-columns: 1fr 1fr;
+    padding: 1.5rem 1.7rem;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    background: var(--bg-alt);
+  }
+  .fact-label {
+    font-family: var(--serif); font-size: 10.5px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.2rem;
+  }
+  .fact-value {
+    font-family: var(--serif); font-size: 14px; color: var(--ink); font-weight: 500;
+  }
+
+  /* CURVED LABEL */
+  .curved-label {
+    position: relative; text-align: center; padding: 5rem 0 3rem;
+  }
+  .curved-label svg { display: block; margin: 0 auto; }
+  .curved-label .arch-logo {
+    position: absolute; left: 50%; transform: translateX(-50%); top: 50%;
+  }
+  .curved-label .arch-logo svg { width: 38px; height: auto; }
+  .curved-label-text {
+    fill: var(--ink); font-family: var(--serif); font-size: 24px;
+    letter-spacing: 12px; text-transform: uppercase; font-weight: 500;
+  }
+
+  /* TIMELINE / WHAT TO EXPECT */
+  .timeline {
+    max-width: 900px; margin: 0 auto; padding: 0 2.5rem 6rem;
+  }
+  .timeline-item {
+    display: grid; grid-template-columns: 110px 1fr; gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-time {
+    font-family: var(--serif); font-style: italic;
+    color: var(--olive); font-size: 16px;
+  }
+  .timeline-body h3 {
+    font-family: var(--serif); font-size: 17px; font-weight: 600;
+    margin-bottom: 0.4rem; color: var(--ink);
+  }
+  .timeline-body p {
+    font-size: 14.5px; line-height: 1.75; color: var(--ink);
+  }
+
+  /* PHOTO SPLIT */
+  .photo-split {
+    display: grid; grid-template-columns: 1fr 1fr;
+  }
+  .photo-split-img {
+    width: 100%; aspect-ratio: 4/5;
+    background-size: cover; background-position: center;
+  }
+
+  /* INCLUDED */
+  .included {
+    padding: 6rem 0;
+  }
+  .included-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 2.5rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+    align-items: start;
+  }
+  .included-inner h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.15; letter-spacing: -0.02em;
+    text-transform: uppercase; color: var(--ink); margin-bottom: 1.5rem;
+  }
+  .included-inner .script-eyebrow {
+    font-family: var(--serif); font-style: italic;
+    font-size: 16px; color: var(--olive); margin-bottom: 0.7rem;
+  }
+  .included-inner ul {
+    list-style: none;
+  }
+  .included-inner li {
+    padding: 0.7rem 0;
+    border-bottom: 1px dashed var(--line);
+    display: flex; gap: 0.8rem;
+    font-size: 14.5px; line-height: 1.5;
+  }
+  .included-inner li::before {
+    content: '✓'; color: var(--olive); font-weight: 600;
+  }
+  .included-inner li.not::before { content: '—'; color: var(--ink-soft); }
+  .included-inner .price-box {
+    background: var(--bg-alt);
+    padding: 2rem;
+    border-left: 3px solid var(--olive);
+  }
+  .price-box .label {
+    font-family: var(--serif); font-size: 10.5px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3rem;
+  }
+  .price-box .amount {
+    font-family: var(--serif); font-size: 28px; color: var(--ink);
+    font-weight: 500; margin-bottom: 0.4rem;
+  }
+  .price-box .amount small {
+    font-size: 14px; color: var(--ink-soft); font-weight: 400; margin-left: 0.3rem;
+  }
+  .price-box .note {
+    font-size: 13px; color: var(--ink-soft); font-style: italic; margin-top: 0.8rem;
+  }
+
+  /* CTA */
+  .booking-callout {
+    background: var(--ink); color: var(--bg);
+    padding: 7rem 2.5rem; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .booking-callout::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_2400,q_auto:good,f_auto,c_fill/v1748365479/bao85el3tzzrazwmnjtl.jpg');
+    background-size: cover; background-position: center;
+    opacity: 0.15; z-index: 0;
+  }
+  .booking-callout-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .booking-callout .eyebrow {
+    font-family: var(--serif); font-style: italic; font-size: 17px;
+    color: var(--sand); margin-bottom: 0.6rem;
+  }
+  .booking-callout h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(2rem, 4.2vw, 3.2rem);
+    line-height: 1.05; letter-spacing: -0.025em;
+    text-transform: uppercase; margin-bottom: 1.4rem; color: var(--bg);
+  }
+  .booking-callout p { font-size: 16px; color: rgba(246, 241, 230, 0.85); margin-bottom: 2.5rem; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 1rem;
+    background: var(--sand); color: var(--ink); border: none;
+    padding: 1.2rem 2.6rem;
+    font-family: var(--serif); font-size: 12px;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    font-weight: 500; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--bg); transform: translateY(-1px); }
+
+  /* OTHER EXPERIENCES */
+  .other-exp {
+    padding: 6rem 0;
+  }
+  .other-exp-header { text-align: center; margin-bottom: 3rem; }
+  .other-exp-header .eyebrow {
+    font-family: var(--serif); font-style: italic; font-size: 17px;
+    color: var(--olive); margin-bottom: 0.4rem;
+  }
+  .other-exp-header h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    letter-spacing: 8px; text-transform: uppercase;
+  }
+  .other-exp-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2rem;
+    max-width: 1300px; margin: 0 auto; padding: 0 2.5rem;
+  }
+  .other-card { cursor: pointer; }
+  .other-card-img {
+    width: 100%; aspect-ratio: 4/5;
+    background-size: cover; background-position: center;
+    margin-bottom: 1rem; transition: transform 0.6s ease;
+  }
+  .other-card:hover .other-card-img { transform: scale(1.02); }
+  .other-card-name {
+    font-family: var(--serif); font-size: 18px; font-weight: 600;
+    color: var(--ink); margin-bottom: 0.3rem;
+  }
+  .other-card-meta { font-size: 13px; color: var(--ink-soft); font-style: italic; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2rem 2.5rem 1.5rem;
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-links { display: flex; gap: 1.8rem; }
+  .footer-right { display: flex; gap: 1.8rem; align-items: center; opacity: 0.85; }
+
+  .lang-pill {
+    position: fixed; left: 1.4rem; bottom: 1.4rem; z-index: 50;
+    background: var(--ink); color: var(--bg);
+    border-radius: 50%; width: 46px; height: 46px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; letter-spacing: 0.15em; font-weight: 600;
+    cursor: pointer; box-shadow: 0 6px 18px rgba(30, 58, 95, 0.25);
+  }
+  .lang-pill:hover { background: #142845; }
+
+  @media print {
+    @page { size: 1440px auto; margin: 0; }
+    .lang-pill { display: none !important; }
+    .nav { position: absolute; }
+    .exp-hero { height: 700px; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+  @media (max-width: 900px) {
+    .nav { padding: 0 1rem; height: 60px; }
+    .nav-logo { top: 9px; }
+    .nav-logo svg { width: 36px; }
+    .exp-counter, .exp-breadcrumb { top: 75px; font-size: 9.5px; }
+    .exp-counter { left: 1.2rem; }
+    .exp-breadcrumb { right: 1.2rem; }
+    .exp-hero-title { left: 1.3rem; right: 1.3rem; bottom: 2rem; }
+    .statement { padding: 7vh 0 4vh; }
+    .statement-grid { grid-template-columns: 1fr; gap: 2.5rem; padding: 0 1.3rem; }
+    .timeline { padding: 0 1.3rem 4rem; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .photo-split { grid-template-columns: 1fr; }
+    .included-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 0 1.3rem; }
+    .booking-callout { padding: 5rem 1.3rem; }
+    .other-exp-grid { grid-template-columns: 1fr; gap: 2.5rem; padding: 0 1.3rem; }
+    .facts { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <button class="nav-side">Menù</button>
+  <a href="mockup-homepage-it.html" class="nav-logo" aria-label="Lama di Luna">
+    <svg viewBox="0 0 64 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 32 V18 A10 10 0 0 1 20 18 V32" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M22 32 V14 A12 12 0 0 1 42 14 V32" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M44 32 V18 A10 10 0 0 1 60 18 V32" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="0" y1="34" x2="64" y2="34" stroke="currentColor" stroke-width="1.4"/>
+    </svg>
+    <div class="logo-text">Lama di Luna</div>
+  </a>
+  <button class="nav-side">Prenota</button>
+</nav>
+
+<section class="exp-hero">
+  <div class="exp-counter">Esperienza 01 / 08</div>
+  <div class="exp-breadcrumb">
+    <a href="mockup-experiences-it.html">Esperienze</a>
+    <span style="opacity:0.55">/</span>
+    <span>Raccolta delle Olive</span>
+  </div>
+  <div class="exp-hero-title">
+    <div class="exp-hero-eyebrow">Ottobre – Novembre · esperienza in masseria</div>
+    <h1>La Raccolta delle Olive</h1>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="statement-grid">
+    <div>
+      <h2>Cammina tra gli ulivi, osserva la spremitura a freddo, assaggia il primo olio dell'anno</h2>
+      <div class="statement-body">
+        <p>Da fine ottobre a metà novembre, i 210 ettari di uliveti della tenuta entrano in raccolta. I raccoglitori si muovono lungo i filari dall'alba; le reti vengono stese sotto gli alberi; le cassette si riempiono e vanno al frantoio prima che il calore del giorno raggiunga il frutto. Il primo olio spremuto ogni giorno è non filtrato, verde brillante, leggermente amaro — il sapore più onesto della cucina pugliese.</p>
+        <p>Unisciti alla raccolta per una mattina. Cammini tra gli ulivi con Pietro o uno degli operai della tenuta. Impari perché raccogliamo a mano su questi alberi, perché la spremitura a freddo conta, perché il primo olio si versa torbido. Poi la colazione: pane caldo, l'olio appena spremuto, sale, un bicchiere di vino.</p>
+      </div>
+    </div>
+    <div class="facts">
+      <div>
+        <div class="fact-label">Stagione</div>
+        <div class="fact-value">Fine ott – metà nov</div>
+      </div>
+      <div>
+        <div class="fact-label">Durata</div>
+        <div class="fact-value">4 ore</div>
+      </div>
+      <div>
+        <div class="fact-label">Gruppo</div>
+        <div class="fact-value">2 – 8 ospiti</div>
+      </div>
+      <div>
+        <div class="fact-label">Lingua</div>
+        <div class="fact-value">EN · IT · DE</div>
+      </div>
+      <div>
+        <div class="fact-label">Difficoltà</div>
+        <div class="fact-value">Camminata leggera</div>
+      </div>
+      <div>
+        <div class="fact-label">Da</div>
+        <div class="fact-value">€85 / persona</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="curved-label">
+    <svg viewBox="0 0 600 160" width="500" height="140">
+      <defs><path id="arcExp" d="M 60 130 A 240 240 0 0 1 540 130" fill="none"/></defs>
+      <text class="curved-label-text"><textPath href="#arcExp" startOffset="50%" text-anchor="middle">La Mattina</textPath></text>
+    </svg>
+    <span class="arch-logo">
+      <svg viewBox="0 0 64 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 32 V18 A10 10 0 0 1 20 18 V32" stroke="#1E3A5F" stroke-width="1.4"/>
+        <path d="M22 32 V14 A12 12 0 0 1 42 14 V32" stroke="#1E3A5F" stroke-width="1.4"/>
+        <path d="M44 32 V18 A10 10 0 0 1 60 18 V32" stroke="#1E3A5F" stroke-width="1.4"/>
+        <line x1="0" y1="34" x2="64" y2="34" stroke="#1E3A5F" stroke-width="1.4"/>
+      </svg>
+    </span>
+  </div>
+</section>
+
+<section class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-time">07:30</div>
+    <div class="timeline-body">
+      <h3>Caffè in cortile</h3>
+      <p>Espresso, dolci alle mandorle del paese, un breve briefing su come sarà la giornata in uliveto. Ti viene dato un cesto e scarpe da camminata se non le hai portate.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-time">08:00</div>
+    <div class="timeline-body">
+      <h3>Tra gli ulivi</h3>
+      <p>Una camminata di 15 minuti tra ulivi secolari fino alla sezione del giorno. Comincia la raccolta a mano. Vedrai i rastrelli tradizionali pugliesi usati per far cadere delicatamente le olive mature sulle reti — mai battute, mai scosse da macchine.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-time">09:30</div>
+    <div class="timeline-body">
+      <h3>La spremitura a freddo</h3>
+      <p>Le prime cassette della mattina vengono portate al frantoio della tenuta. Vedrai le olive entrare, uscire la pasta, la centrifuga separare l'olio dall'acqua. Quarantacinque minuti dall'uliveto all'olio.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-time">10:30</div>
+    <div class="timeline-body">
+      <h3>La prima degustazione</h3>
+      <p>Una colazione sotto la loggia: focaccia calda, sale, l'olio appena spremuto versato sopra, un calice di Negroamaro. Parliamo di quello che hai assaggiato — piccante, erbaceo, alle mandorle — e di cosa ti dice che è stato spremuto da meno di un'ora.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-time">11:30</div>
+    <div class="timeline-body">
+      <h3>Parti con una bottiglia</h3>
+      <p>Ogni ospite porta a casa una bottiglia da 500ml dell'olio della mattina, etichettata con la data del giorno. L'olio extravergine più fresco che tu possa mai portare a casa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="photo-split">
+  <div class="photo-split-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748888083/omou7cxhd8opgelkbeuz.jpg');"></div>
+  <div class="photo-split-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748365479/bao85el3tzzrazwmnjtl.jpg');"></div>
+</section>
+
+<section class="included">
+  <div class="included-inner">
+    <div>
+      <div class="script-eyebrow">Incluso</div>
+      <h2>Cosa è compreso</h2>
+      <ul>
+        <li>Mattina guidata di mezza giornata, dall'alba alla tarda mattina</li>
+        <li>Camminata negli uliveti storici con Pietro o il responsabile della tenuta</li>
+        <li>Visita al frantoio della tenuta, in stagione</li>
+        <li>Colazione degustazione: focaccia, olio, vino, dolci alle mandorle</li>
+        <li>Una bottiglia da 500ml dell'olio del mattino, da portare a casa</li>
+        <li>Fotografie consentite ovunque</li>
+        <li class="not">Trasporto da/per la masseria (consigliamo di soggiornare da noi)</li>
+        <li class="not">Pranzo (organizzabile a parte)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="price-box">
+        <div class="label">Prezzo</div>
+        <div class="amount">€85<small>a persona</small></div>
+        <div class="note">Bambini sotto i 12 anni gratuiti se accompagnati da un adulto. Minimo 2 ospiti. Massimo 8 a sessione per un'esperienza raccolta.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-callout">
+  <div class="booking-callout-inner">
+    <div class="eyebrow">Solo da ottobre a novembre</div>
+    <h2>Organizza la tua mattina di raccolta</h2>
+    <p>Si abbina al meglio a un soggiorno di 2 o 3 notti durante la raccolta. Dicci le tue date e confermeremo disponibilità e il giorno di raccolta più probabile.</p>
+    <a href="mockup-contact-it.html" class="btn-primary">Contattaci</a>
+  </div>
+</section>
+
+<section class="other-exp">
+  <div class="other-exp-header">
+    <div class="eyebrow">Continua</div>
+    <h2>Altre esperienze</h2>
+  </div>
+  <div class="other-exp-grid">
+    <a href="#" class="other-card">
+      <div class="other-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1000,q_auto:best,f_auto,c_fill/v1748888055/nxskbhvgtpuxzfoqavfb.jpg');"></div>
+      <div class="other-card-name">Orecchiette &amp; Focaccia</div>
+      <div class="other-card-meta">Corso di cucina · mezza giornata, su prenotazione</div>
+    </a>
+    <a href="#" class="other-card">
+      <div class="other-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1000,q_auto:best,f_auto,c_fill/v1679928579/czk5bwys9xduwfefummm.jpg');"></div>
+      <div class="other-card-name">Camminata all'alba tra gli ulivi</div>
+      <div class="other-card-meta">Alba · 90 minuti</div>
+    </a>
+    <a href="#" class="other-card">
+      <div class="other-card-img" style="background-image: url('https://res.cloudinary.com/amenitiz/image/upload/w_1000,q_auto:best,f_auto,c_fill/v1747243212/wj7lc1n5p7gpmqnwredd.jpg');"></div>
+      <div class="other-card-name">Alberobello e i Trulli</div>
+      <div class="other-card-meta">Gita · 1h 10 min in auto</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Tripadvisor</a>
+    <a href="#">Privacy</a><a href="#">Cookies</a>
+  </div>
+  <div class="footer-right">
+    <span>CIN: IT110001B500020950</span>
+    <span>© 2026 Lama di Luna · Andria, BT</span>
+  </div>
+</footer>
+
+<div class="lang-pill" id="langPill">EN</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  const hero = document.querySelector('.exp-hero');
+  function onScroll() {
+    const b = hero.getBoundingClientRect().bottom;
+    if (b < 70) nav.classList.add('over-light'); else nav.classList.remove('over-light');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  const langs = ['EN','IT','DE','FR']; let li = 1; document.getElementById('langPill').textContent = langs[li];
+  const pill = document.getElementById('langPill');
+  pill.addEventListener('click', () => { li = (li+1) % langs.length; pill.textContent = langs[li]; });
+</script>
+
+</body>
+</html>

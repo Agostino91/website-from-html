@@ -1,0 +1,201 @@
+import type { Locale } from "@/lib/i18n"
+
+type Block = { eyebrow: string; title: string; body: string[]; img: string }
+type Detail = { num: string; title: string; body: string }
+
+export type StoryContent = {
+  heroEyebrow: string
+  statementTitle: string
+  statementBody: string[]
+  buildingLabel: string
+  building: Block
+  landLabel: string
+  land: Block
+  pietroLabel: string
+  pietroEyebrow: string
+  pietroTitle: string
+  pietroQuote: string
+  pietroSignature: string
+  pietroBody: string
+  pietroNote: string
+  filmLabel: string
+  filmCta: string
+  restorationEyebrow: string
+  restorationTitle: string
+  details: Detail[]
+  fullPhoto: string
+  calloutEyebrow: string
+  calloutTitle: string
+  calloutBody: string
+  calloutCta: string
+}
+
+const IMG = {
+  building:
+    "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1679928582/brqp64y9q5oogzmppcja.jpg",
+  land: "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748365479/bao85el3tzzrazwmnjtl.jpg",
+  full: "https://res.cloudinary.com/amenitiz/image/upload/w_2400,q_auto:best,f_auto,c_fill/v1679928587/vt7xxd7g2xxn5sqk3mkt.jpg",
+}
+
+export const YOUTUBE_ID = "qzT1XEFQ_FM"
+
+export const story: Record<Locale, StoryContent> = {
+  en: {
+    heroEyebrow: "The Story",
+    statementTitle: "An 18th-century masseria at the centre of 210 hectares of organic estate",
+    statementBody: [
+      "Lama di Luna sits in the heart of the Alta Murgia National Park, in Contrada Lama di Luna near Andria. Its name means Valley of the Moon — lama for valley, luna for moon and fertility. The building dates to 1830, restored after three years of work in the early 2000s with mortar, lime, and the same red earth that gave the surrounding fields their colour.",
+      "What the masseria looks like today is not a reconstruction. It is what was already here, kept honest.",
+    ],
+    buildingLabel: "The Masseria",
+    building: {
+      eyebrow: "Built in 1830",
+      title: "A farmhouse for the Mezzadri",
+      body: [
+        "The masseria was originally built to house the Mezzadri — sharecroppers, in the old Italian system, who farmed the land and gave half their harvest to the landowner. Their dwellings, their fireplaces, their courtyard. The bones of what is now a hotel.",
+        "Restored with respect for the building's rural tradition: mortar and natural materials only, old beams and bricks reused where possible, fixtures from the 1800s kept rather than replaced. Even the wall colours are mixed from the red and yellow earth of the surrounding regions — the same earth that once built the walls themselves.",
+      ],
+      img: IMG.building,
+    },
+    landLabel: "The Land",
+    land: {
+      eyebrow: "210 hectares",
+      title: "The estate, organic since 1995",
+      body: [
+        "Around the masseria, 210 hectares (518 acres) of olive groves, almond groves and vineyards. All organically cultivated and certified by AIAB-ICEA — Italy's organic-agriculture body — since 1995. The first cold-press oil of the year is pressed in November. The almond harvest comes at the end of August. Wine is still made on these grounds.",
+        "The land is also home to the Alta Murgia National Park's wildlife — kestrels and small owls nest in the masseria's chimneys; foxes cross the olive rows at dusk. We work the land in a way that lets them stay.",
+      ],
+      img: IMG.land,
+    },
+    pietroLabel: "Pietro Petroni",
+    pietroEyebrow: "The custodian",
+    pietroTitle: "The hands that keep this place",
+    pietroQuote:
+      "Lama di Luna is my home, where I live with Agata and my sons Agostino and Stefano. We work and conserve the estate's lands so that along with us, all manner of wildlife can share the magic of our national park, the Murgia. Hospitality is given to all who wish to pass by, and enjoy a stay at our beautiful masseria.",
+    pietroSignature: "Pietro Petroni",
+    pietroBody:
+      "Pietro lives at the masseria year-round with his wife Agata and their two sons. He oversees the olive harvest, the wine, the kestrels and the little owls nesting in the chimneys. Most mornings he can be found walking the groves before breakfast.",
+    pietroNote: "Placeholder · replace with Pietro & owl frame",
+    filmLabel: "The Film",
+    filmCta: "Watch with sound",
+    restorationEyebrow: "The restoration",
+    restorationTitle: "Six choices that shaped the masseria",
+    details: [
+      {
+        num: "01",
+        title: "Red earth on the walls",
+        body: "The same red and yellow earth from the surrounding fields used to build the original walls is what now colours them. Mixed by hand, brushed onto plaster, never painted.",
+      },
+      {
+        num: "02",
+        title: "Beds facing north",
+        body: "Every bed in the masseria is positioned facing north — following the feng-shui principle the restoration honoured, and a hint of the agronomic instinct of the Mezzadri before us.",
+      },
+      {
+        num: "03",
+        title: "Rounded edges",
+        body: "Sharp corners are softened throughout — because in nature everything is round, everything is in harmony, everything is part of the whole. A choice of feel, not finish.",
+      },
+      {
+        num: "04",
+        title: "Forty chimneys, scattered trulli",
+        body: "The masseria has forty chimneys, several scattered trulli, and a complex structure that the simple shapes of the rooms don't betray. The architecture tells the story of generations who worked here.",
+      },
+      {
+        num: "05",
+        title: "48 solar + 400 photovoltaic panels",
+        body: "Hot water and heating from 48 solar panels. Electricity from 400 photovoltaic panels. The masseria has lived without the grid for nearly two decades — quietly, gratefully, on the energy of the same sun that ripens the olives.",
+      },
+      {
+        num: "06",
+        title: "Olive oil, raw cotton, terracotta",
+        body: "Bath products are olive-oil soaps, pressed on the estate. Linens are raw cotton, kept simple. Basins are terracotta, fired locally. The materials of the building are also the materials of the stay.",
+      },
+    ],
+    fullPhoto: IMG.full,
+    calloutEyebrow: "Come and see",
+    calloutTitle: "Stay where the story still happens",
+    calloutBody:
+      "Eleven rooms, an olive harvest from October, a kitchen that opens by arrangement, and a masseria that has been kept honest since 1830.",
+    calloutCta: "Browse the rooms",
+  },
+  it: {
+    heroEyebrow: "La Storia",
+    statementTitle: "Una masseria del XVIII secolo al centro di 210 ettari di tenuta biologica",
+    statementBody: [
+      "Lama di Luna sorge nel cuore del Parco Nazionale dell'Alta Murgia, in Contrada Lama di Luna vicino Andria. Il suo nome significa Valle della Luna — lama per valle, luna per luna e fertilità. L'edificio risale al 1830, restaurato dopo tre anni di lavoro nei primi anni 2000 con calce, malta e la stessa terra rossa che ha dato il colore ai campi circostanti.",
+      "Quello che la masseria è oggi non è una ricostruzione. È quello che c'era, mantenuto con onestà.",
+    ],
+    buildingLabel: "La Masseria",
+    building: {
+      eyebrow: "Costruita nel 1830",
+      title: "Una fattoria per i Mezzadri",
+      body: [
+        "La masseria fu costruita per accogliere i Mezzadri — contadini, nel vecchio sistema italiano, che lavoravano la terra dando metà del raccolto al proprietario. Le loro dimore, i loro camini, il loro cortile. Le ossa di quello che oggi è un hotel.",
+        "Restaurata nel rispetto della tradizione rurale: solo malta e materiali naturali, vecchie travi e mattoni riutilizzati dove possibile, infissi dell'Ottocento conservati anziché sostituiti. Persino i colori delle pareti sono mescolati con la terra rossa e gialla delle regioni circostanti — la stessa terra che un tempo costruì queste pareti.",
+      ],
+      img: IMG.building,
+    },
+    landLabel: "La Terra",
+    land: {
+      eyebrow: "210 ettari",
+      title: "La tenuta, biologica dal 1995",
+      body: [
+        "Intorno alla masseria, 210 ettari di uliveti, mandorleti e vigneti. Tutti coltivati in biologico e certificati AIAB-ICEA — l'ente italiano di agricoltura biologica — dal 1995. Il primo olio dell'anno, spremuto a freddo, si fa a novembre. La raccolta delle mandorle arriva a fine agosto. Il vino è ancora prodotto in questa terra.",
+        "La tenuta è anche casa della fauna del Parco Nazionale dell'Alta Murgia — gheppi e civette nidificano nei camini della masseria, le volpi attraversano i filari d'ulivo al tramonto. Lavoriamo la terra in un modo che li lascia restare.",
+      ],
+      img: IMG.land,
+    },
+    pietroLabel: "Pietro Petroni",
+    pietroEyebrow: "Il custode",
+    pietroTitle: "Le mani che custodiscono questo luogo",
+    pietroQuote:
+      "Lama di Luna è la mia casa, dove vivo con Agata e i miei figli Agostino e Stefano. Lavoriamo e conserviamo le terre della tenuta affinché, insieme a noi, ogni forma di fauna selvatica possa condividere la magia del nostro parco nazionale, la Murgia. L'ospitalità è offerta a chiunque desideri passare di qui e godere di un soggiorno nella nostra bellissima masseria.",
+    pietroSignature: "Pietro Petroni",
+    pietroBody:
+      "Pietro vive in masseria tutto l'anno con la moglie Agata e i due figli. Cura la raccolta delle olive, il vino, i gheppi e le civette che nidificano nei camini. La mattina, lo si trova quasi sempre a camminare tra gli uliveti prima di colazione.",
+    pietroNote: "Segnaposto · sostituire con frame di Pietro e civetta",
+    filmLabel: "Il Film",
+    filmCta: "Guarda con audio",
+    restorationEyebrow: "Il restauro",
+    restorationTitle: "Sei scelte che hanno dato forma alla masseria",
+    details: [
+      {
+        num: "01",
+        title: "Terra rossa sulle pareti",
+        body: "La stessa terra rossa e gialla dei campi circostanti, usata per costruire le pareti originali, è oggi quella che le colora. Mescolata a mano, stesa sull'intonaco, mai dipinta.",
+      },
+      {
+        num: "02",
+        title: "Letti rivolti a nord",
+        body: "Ogni letto della masseria è orientato verso nord — seguendo il principio del feng-shui che il restauro ha onorato, e un'eco dell'istinto agronomico dei Mezzadri che ci hanno preceduto.",
+      },
+      {
+        num: "03",
+        title: "Spigoli arrotondati",
+        body: "Gli angoli vivi sono smussati ovunque — perché in natura tutto è rotondo, tutto è in armonia, tutto è parte del tutto. Una scelta di sensazione, non di rifinitura.",
+      },
+      {
+        num: "04",
+        title: "Quaranta camini, trulli sparsi",
+        body: "La masseria ha quaranta camini, diversi trulli sparsi e una struttura complessa che le forme semplici delle stanze non tradiscono. L'architettura racconta la storia di generazioni che hanno lavorato qui.",
+      },
+      {
+        num: "05",
+        title: "48 pannelli solari + 400 fotovoltaici",
+        body: "Acqua calda e riscaldamento da 48 pannelli solari. Elettricità da 400 pannelli fotovoltaici. La masseria vive fuori rete da quasi vent'anni — silenziosamente, con gratitudine, grazie all'energia dello stesso sole che fa maturare le olive.",
+      },
+      {
+        num: "06",
+        title: "Olio d'oliva, cotone grezzo, terracotta",
+        body: "I prodotti da bagno sono saponi all'olio d'oliva, pressati in tenuta. Le lenzuola sono di cotone grezzo, mantenute semplici. I lavabi sono di terracotta, cotti localmente. I materiali dell'edificio sono anche i materiali del soggiorno.",
+      },
+    ],
+    fullPhoto: IMG.full,
+    calloutEyebrow: "Vieni a vedere",
+    calloutTitle: "Soggiorna dove la storia continua",
+    calloutBody:
+      "Undici camere, una raccolta delle olive da ottobre, una cucina che si apre su prenotazione, e una masseria mantenuta onesta dal 1830.",
+    calloutCta: "Scopri le camere",
+  },
+}
