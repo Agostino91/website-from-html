@@ -49,12 +49,12 @@ const IMG = {
 
 export const home: Record<Locale, HomeContent> = {
   en: {
-    statementTitle: "A valley where stone, olive\u00a0and moonlight have been at\u00a0home since 1830",
+    statementTitle: "Experience Puglia's nature, agriculture and history at its most authentic",
     statementBody: [
-      "An 18th-century masseria in the heart of Puglia, Lama di Luna sits at the centre of 210 hectares of organic olive groves, almond groves and vineyards — restored stone by stone by Pietro Petroni and his family. Forty chimneys, walls coloured with the same red and yellow earth that built them, beds facing north, edges rounded — because in nature everything is round, everything is in harmony, everything is part of the whole.",
-      "Featured in National Geographic, in Stanley Tucci's Searching for Italy, in Lonely Planet — but always, first, a home.",
+      "Our 18th century farmhouse or masseria, restored to its original glory, is nestled in a 518-acre estate of all organic olive groves, almond groves, vineyards and wildlands. Stay in our rustic rooms, formerly inhabited by settlers and Mezzadri farmers. Immerse yourself in the tranquility and natural beauty of the sprawling Murgia national park. Languish in our panoramic pool overlooking vast olive fields. Taste our high quality extra virgin olive oil, almonds and local produce at The Veranda restaurant.",
+      "Let time stand still at Lama di Luna, our Valley of the Moon.",
     ],
-    discover: "Discover",
+    discover: "Read our story",
     roomsLabel: "Our Rooms",
     rooms: [
       {
@@ -109,12 +109,12 @@ export const home: Record<Locale, HomeContent> = {
     newsletterConsent: "I accept the terms & conditions and the privacy policy",
   },
   it: {
-    statementTitle: "Una valle dove pietra, ulivo\u00a0e chiaro di luna sono di\u00a0casa dal 1830",
+    statementTitle: "Vivi la natura, l'agricoltura e la storia della Puglia nella loro forma più autentica",
     statementBody: [
-      "Una masseria del XVIII secolo nel cuore della Puglia, Lama di Luna sorge al centro di 210 ettari di uliveti, mandorleti e vigneti biologici — restaurata pietra su pietra da Pietro Petroni e dalla sua famiglia. Quaranta camini, pareti colorate con la stessa terra rossa e gialla che le ha costruite, letti rivolti a nord, spigoli arrotondati — perché in natura tutto è rotondo, tutto è in armonia, tutto è parte del tutto.",
-      "Raccontata da National Geographic, da Stanley Tucci in Searching for Italy, da Lonely Planet — ma sempre, prima di tutto, una casa.",
+      "La nostra masseria del XVIII secolo, riportata al suo antico splendore, è immersa in una tenuta di 210 ettari di uliveti, mandorleti, vigneti e terre selvagge, tutti biologici. Soggiorna nelle nostre camere rustiche, un tempo abitate da coloni e mezzadri. Immergiti nella tranquillità e nella bellezza naturale dell'immenso Parco Nazionale dell'Alta Murgia. Rilassati nella nostra piscina panoramica affacciata su vasti campi di ulivi. Assapora il nostro olio extravergine d'oliva di alta qualità, le mandorle e i prodotti locali al ristorante The Veranda.",
+      "Lascia che il tempo si fermi a Lama di Luna, la nostra Valle della Luna.",
     ],
-    discover: "Scopri",
+    discover: "Leggi la nostra storia",
     roomsLabel: "Le Camere",
     rooms: [
       {

@@ -30,7 +30,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <p key={i}>{p}</p>
             ))}
           </div>
-          <Scopri href="#story">{c.discover}</Scopri>
+          <Scopri href={`/${lang}/story`}>{c.discover}</Scopri>
         </div>
       </section>
 
