@@ -1,0 +1,146 @@
+import type { Locale } from "@/lib/i18n"
+
+type Course = { name: string; desc: string; note?: string }
+type Hour = { label: string; value: string }
+
+export type RestaurantContent = {
+  counter: string
+  breadcrumbRoot: string
+  breadcrumbCurrent: string
+  heroEyebrow: string
+  title: string
+  statementTitle: string
+  statementBody: string[]
+  facts: Hour[]
+  curvedLabel: string
+  menuEyebrow: string
+  menuTitle: string
+  menuNote: string
+  courses: Course[]
+  photos: [string, string]
+  sourcingEyebrow: string
+  sourcingTitle: string
+  sourcingBody: string[]
+  sourcingImg: string
+  bookingEyebrow: string
+  bookingTitle: string
+  bookingText: string
+  bookingCta: string
+}
+
+const IMG = {
+  hero: "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748888055/nxskbhvgtpuxzfoqavfb.jpg",
+  photo1:
+    "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748888083/omou7cxhd8opgelkbeuz.jpg",
+  photo2:
+    "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1679928582/brqp64y9q5oogzmppcja.jpg",
+}
+
+export const restaurant: Record<Locale, RestaurantContent> = {
+  en: {
+    counter: "The Veranda",
+    breadcrumbRoot: "Home",
+    breadcrumbCurrent: "Restaurant",
+    heroEyebrow: "Dining at the masseria",
+    title: "The Veranda",
+    statementTitle: "A single table, set each evening with whatever the estate has given that day",
+    statementBody: [
+      "Dinner at The Veranda is served beneath the vaulted ceiling of the old refectory, or outside on warm nights, looking over the olive groves as the light falls. There is no long menu — there is what is ripe, what was pressed, what was baked this morning.",
+      "Our kitchen follows the Murgian and Pugliese tradition: few ingredients, treated with respect. The olive oil is ours, the vegetables come from the garden, the bread is broken warm at the table.",
+    ],
+    facts: [
+      { label: "Breakfast", value: "8:00 – 10:30" },
+      { label: "Dinner", value: "By arrangement, from 20:00" },
+      { label: "Seating", value: "One evening table" },
+      { label: "Diets", value: "Vegetarian & vegan on request" },
+    ],
+    curvedLabel: "At the Table",
+    menuEyebrow: "A sample evening",
+    menuTitle: "What the day gives",
+    menuNote: "The menu changes daily. This is one evening's table — yours will follow the season.",
+    courses: [
+      {
+        name: "To begin",
+        desc: "Warm focaccia and taralli, our own extra-virgin olive oil, fresh ricotta, marinated garden vegetables.",
+      },
+      {
+        name: "First",
+        desc: "Orecchiette with turnip tops and toasted breadcrumbs, or a broad-bean purée with wild chicory.",
+      },
+      {
+        name: "Main",
+        desc: "Slow-cooked lamb from the Murgia with almonds and herbs, or baked seasonal vegetables from the estate garden.",
+      },
+      {
+        name: "To close",
+        desc: "Almond dolci, estate fruit, a glass of our own wine or an amaro made from Murgian herbs.",
+      },
+    ],
+    photos: [IMG.photo1, IMG.photo2],
+    sourcingEyebrow: "From the estate",
+    sourcingTitle: "Grown, pressed and cooked within the same walls",
+    sourcingBody: [
+      "The oil is cold-pressed from our organic groves. The almonds are harvested in late summer, the wine still made on these grounds. Vegetables are picked in the morning from the walled garden a few steps from the kitchen.",
+      "What we cannot grow, we source from neighbours we trust — ricotta from a nearby farm, flour from a Murgian mill, honey from the hills. Nothing travels far to reach the table.",
+    ],
+    sourcingImg: IMG.hero,
+    bookingEyebrow: "Reserve the table",
+    bookingTitle: "Dine with us",
+    bookingText:
+      "Dinner is prepared to order and seating is limited, so we ask guests to reserve by the afternoon. Tell us the evening and any dietary needs and we will set a place for you.",
+    bookingCta: "Reserve a table",
+  },
+  it: {
+    counter: "The Veranda",
+    breadcrumbRoot: "Home",
+    breadcrumbCurrent: "Ristorante",
+    heroEyebrow: "A tavola in masseria",
+    title: "The Veranda",
+    statementTitle: "Un'unica tavola, apparecchiata ogni sera con ciò che la tenuta ha dato quel giorno",
+    statementBody: [
+      "La cena a The Veranda è servita sotto la volta dell'antico refettorio, o all'aperto nelle sere calde, con lo sguardo sugli uliveti mentre cala la luce. Non c'è un lungo menù — c'è ciò che è maturo, ciò che è stato spremuto, ciò che è stato sfornato stamattina.",
+      "La nostra cucina segue la tradizione murgiana e pugliese: pochi ingredienti, trattati con rispetto. L'olio è il nostro, le verdure vengono dall'orto, il pane si spezza caldo a tavola.",
+    ],
+    facts: [
+      { label: "Colazione", value: "8:00 – 10:30" },
+      { label: "Cena", value: "Su prenotazione, dalle 20:00" },
+      { label: "Posti", value: "Un'unica tavola serale" },
+      { label: "Diete", value: "Vegetariana e vegana su richiesta" },
+    ],
+    curvedLabel: "A Tavola",
+    menuEyebrow: "Una sera d'esempio",
+    menuTitle: "Ciò che dà la giornata",
+    menuNote: "Il menù cambia ogni giorno. Questa è la tavola di una sera — la vostra seguirà la stagione.",
+    courses: [
+      {
+        name: "Per iniziare",
+        desc: "Focaccia calda e taralli, il nostro olio extravergine, ricotta fresca, verdure dell'orto marinate.",
+      },
+      {
+        name: "Primo",
+        desc: "Orecchiette con cime di rapa e mollica tostata, oppure purè di fave con cicoria selvatica.",
+      },
+      {
+        name: "Secondo",
+        desc: "Agnello della Murgia cotto lentamente con mandorle ed erbe, o verdure di stagione al forno dall'orto della tenuta.",
+      },
+      {
+        name: "Per chiudere",
+        desc: "Dolci alle mandorle, frutta della tenuta, un calice del nostro vino o un amaro di erbe murgiane.",
+      },
+    ],
+    photos: [IMG.photo1, IMG.photo2],
+    sourcingEyebrow: "Dalla tenuta",
+    sourcingTitle: "Coltivato, spremuto e cucinato tra le stesse mura",
+    sourcingBody: [
+      "L'olio è spremuto a freddo dai nostri uliveti biologici. Le mandorle si raccolgono a fine estate, il vino è ancora prodotto su queste terre. Le verdure si colgono al mattino dall'orto recintato a pochi passi dalla cucina.",
+      "Ciò che non coltiviamo lo prendiamo da vicini di cui ci fidiamo — ricotta da una fattoria vicina, farina da un mulino murgiano, miele dalle colline. Nulla viaggia a lungo per arrivare in tavola.",
+    ],
+    sourcingImg: IMG.hero,
+    bookingEyebrow: "Prenota la tavola",
+    bookingTitle: "Cena con noi",
+    bookingText:
+      "La cena si prepara su ordinazione e i posti sono limitati, perciò chiediamo di prenotare entro il pomeriggio. Indicaci la sera e ogni esigenza alimentare e apparecchieremo per te.",
+    bookingCta: "Prenota una tavola",
+  },
+}

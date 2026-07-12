@@ -1,0 +1,104 @@
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { SiteNav } from "@/components/site-nav"
+import { SiteFooter } from "@/components/site-footer"
+import { CurvedLabel } from "@/components/curved-label"
+import { isLocale } from "@/lib/i18n"
+import { exclusive } from "@/lib/content/exclusive"
+
+export default async function ExclusivePage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  if (!isLocale(lang)) notFound()
+  const c = exclusive[lang]
+
+  return (
+    <>
+      <SiteNav locale={lang} variant="overlay" />
+
+      <section className="exp-hero">
+        <div className="exp-counter">{c.counter}</div>
+        <div className="exp-breadcrumb">
+          <Link href={`/${lang}`}>{c.breadcrumbRoot}</Link>
+          <span style={{ opacity: 0.55 }}>/</span>
+          <span>{c.breadcrumbCurrent}</span>
+        </div>
+        <div className="exp-hero-title">
+          <div className="exp-hero-eyebrow">{c.heroEyebrow}</div>
+          <h1>{c.title}</h1>
+        </div>
+      </section>
+
+      <section className="statement">
+        <div className="statement-grid">
+          <div>
+            <h2>{c.statementTitle}</h2>
+            <div className="statement-body">
+              {c.statementBody.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+          <div className="facts">
+            {c.facts.map((f) => (
+              <div key={f.label}>
+                <div className="fact-label">{f.label}</div>
+                <div className="fact-value">{f.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <CurvedLabel text={c.curvedLabel} />
+      </section>
+
+      <section className="menu-course-header" style={{ paddingTop: "1rem" }}>
+        <div className="script-eyebrow">{c.perksEyebrow}</div>
+        <h2>{c.perksTitle}</h2>
+      </section>
+
+      <section className="exclusive-perks">
+        {c.perks.map((perk, i) => (
+          <div className="exclusive-perk" key={perk.title}>
+            <div className="num">{String(i + 1).padStart(2, "0")}</div>
+            <h3>{perk.title}</h3>
+            <p>{perk.body}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="photo-split">
+        <div className="photo-split-img" style={{ backgroundImage: `url('${c.photos[0]}')` }} />
+        <div className="photo-split-img" style={{ backgroundImage: `url('${c.photos[1]}')` }} />
+      </section>
+
+      <section>
+        <div className="text-image reverse">
+          <div className="image-block" style={{ backgroundImage: `url('${c.fullImg}')` }} />
+          <div className="text-block">
+            <div className="script-eyebrow" style={{ marginBottom: "1rem" }}>
+              {c.occasionsEyebrow}
+            </div>
+            {c.occasionsBody.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="booking-callout">
+        <div className="booking-callout-inner">
+          <div className="eyebrow">{c.bookingEyebrow}</div>
+          <h2>{c.bookingTitle}</h2>
+          <p>{c.bookingText}</p>
+          <Link href={`/${lang}/contact`} className="btn-primary">
+            {c.bookingCta}
+          </Link>
+        </div>
+      </section>
+
+      <SiteFooter locale={lang} />
+    </>
+  )
+}

@@ -762,7 +762,189 @@ section {
   }
 }
 
+/* ---------------- RESTAURANT MENU COURSES ---------------- */
+.menu-course-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2.5rem 2rem;
+}
+.menu-course-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.menu-course-header h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0.6rem 0 1rem;
+}
+.menu-course-header p {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.menu-course {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--line);
+}
+.menu-course:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.menu-course-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--olive);
+}
+.menu-course-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+@media (max-width: 700px) {
+  .menu-course {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* ---------------- SHOP ---------------- */
+.shop-page .shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2.2rem;
+  max-width: 1500px;
+  margin: 0 auto 5rem;
+  padding: 0 2.5rem;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+}
+.shop-card-img {
+  aspect-ratio: 4/5;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1.3rem;
+  background-color: var(--bg-alt);
+}
+.shop-card-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.shop-card-meta {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+.shop-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 0.9rem;
+}
+.shop-card-price {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--ink);
+}
+.shop-card-add {
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--olive);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.shop-card-add:hover {
+  opacity: 0.6;
+}
+.shop-note {
+  max-width: 640px;
+  margin: 0 auto 5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border: 1px solid var(--line);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .shop-page .shop-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.3rem;
+    padding: 0 1.3rem;
+  }
+}
+@media (max-width: 560px) {
+  .shop-page .shop-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- EXCLUSIVE (WHOLE ESTATE) ---------------- */
+.exclusive-perks {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2.5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.exclusive-perk {
+  border-top: 2px solid var(--ink);
+  padding-top: 1.2rem;
+}
+.exclusive-perk .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--olive);
+  margin-bottom: 0.8rem;
+}
+.exclusive-perk h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.exclusive-perk p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+@media (max-width: 900px) {
+  .exclusive-perks {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 1.3rem 2rem;
+  }
+}
+
 /* ---------------- 2-UP PHOTO SPLIT ---------------- */
+.v0-css-marker {
+  color: #123456;
+}
 .photo-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
