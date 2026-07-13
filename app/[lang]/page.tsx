@@ -96,7 +96,10 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             ))}
             <Scopri href={`/${lang}/experiences`}>{c.experiencesCta}</Scopri>
           </div>
-          <div className="image-block" style={{ backgroundImage: `url('${c.experiencesImg}')` }} />
+          <div
+            className="image-block"
+            style={{ backgroundImage: `url('${c.experiencesImg}')`, backgroundPosition: "20% center" }}
+          />
         </div>
       </section>
 
