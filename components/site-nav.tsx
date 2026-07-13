@@ -39,6 +39,14 @@ export function SiteNav({
     return () => window.removeEventListener("scroll", onScroll)
   }, [variant])
 
+  // Close the menu as soon as the page scrolls, so it stays tied to the hero.
+  useEffect(() => {
+    if (!open) return
+    const onScroll = () => setOpen(false)
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [open])
+
   // Close the menu on Escape or a click outside.
   useEffect(() => {
     if (!open) return
@@ -59,7 +67,8 @@ export function SiteNav({
   const solid = variant === "solid" || scrolled
 
   return (
-    <nav className={`nav${solid ? " nav--solid" : ""}`}>
+    <nav className={`nav${solid ? " nav--solid" : ""}${open ? " nav--open" : ""}`}>
+      <div className={`nav-curtain${open ? " is-open" : ""}`} aria-hidden="true" />
       <div className="nav-menu" ref={menuRef}>
         <button
           type="button"

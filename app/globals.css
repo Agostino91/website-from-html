@@ -114,6 +114,23 @@ a {
 .nav-menu {
   position: relative;
 }
+/* Semi-transparent curtain behind the open menu for readability */
+.nav-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(20, 24, 30, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+}
+.nav-curtain.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease;
+}
 .nav-dropdown {
   position: absolute;
   top: calc(100% + 0.9rem);
@@ -123,13 +140,18 @@ a {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.5rem;
   min-width: 220px;
   color: var(--bg);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
+}
+/* Keep menu text light and legible over the dark curtain */
+.nav--open .nav-dropdown,
+.nav--open.nav--solid .nav-dropdown {
+  color: var(--bg);
 }
 .nav-dropdown.is-open {
   opacity: 1;
@@ -166,9 +188,9 @@ a {
   background-position: center;
 }
 .hero--home {
-  background-image: url("/hero-masseria-aerial.jpg");
-  background-size: 165%;
-  background-position: 42% 62%;
+  background-image: url("/hero-masseria-centered.jpg");
+  background-size: 130%;
+  background-position: 50% 60%;
 }
 .hero--story {
   min-height: 640px;
@@ -843,12 +865,12 @@ section {
 }
 
 /* ---------------- TEXT + IMAGE ---------------- */
-.text-image {
+ .text-image {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
-  padding: 8rem 2.5rem;
+  padding: 0 2.5rem 6rem;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -912,12 +934,12 @@ section {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 2.5rem;
-  font-size: 19px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.85;
   color: var(--ink);
 }
 .where-text p {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
   max-width: 1100px;
 }
 
@@ -2448,7 +2470,7 @@ footer {
     max-width: none;
   }
   .where-text {
-  font-size: 17px;
+  font-size: 15px;
   padding: 0 1.3rem;
   }
   .press {
