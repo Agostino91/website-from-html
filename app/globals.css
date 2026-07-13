@@ -189,10 +189,8 @@ a {
 }
 .hero--home {
   background-image: url("/hero-masseria-centered.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--ink);
+  background-size: cover;
+  background-position: center 60%;
 }
 .hero--story {
   min-height: 640px;
