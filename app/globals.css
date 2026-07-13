@@ -615,6 +615,174 @@ section {
   }
 }
 
+/* ---------------- ROOM DETAIL PAGE ---------------- */
+/* Listing uses the shared .rooms-grid defined above (3-UP ROOMS). */
+.rooms-page .rooms-grid {
+  margin-bottom: 6rem;
+}
+.room-detail {
+  padding-top: 90px;
+}
+.room-detail-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem 3rem;
+}
+.room-back {
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--olive);
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+.room-detail-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+.room-detail-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(38px, 6vw, 66px);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 2.8rem;
+  text-wrap: balance;
+}
+.room-detail-body {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.room-detail-copy p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--ink);
+  margin-bottom: 1.4rem;
+  max-width: 60ch;
+}
+.room-detail-aside {
+  border-top: 2px solid var(--ink);
+  padding-top: 1.6rem;
+}
+.room-detail-price {
+  font-family: var(--serif);
+  margin-bottom: 1.8rem;
+}
+.room-detail-price small {
+  display: block;
+  font-size: 10.5px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.3rem;
+}
+.room-detail-price span {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.room-detail-facts h2 {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+  font-weight: 500;
+}
+.room-detail-facts ul {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+.room-detail-facts li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.room-book-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  transition: background 0.25s ease;
+}
+.room-book-btn:hover {
+  background: var(--olive);
+}
+
+/* Mosaic "puzzle" gallery */
+.room-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 220px;
+  gap: 1rem;
+  max-width: 1500px;
+  margin: 1rem auto 7rem;
+  padding: 0 2.5rem;
+}
+.room-gallery-tile {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.room-gallery-tile:nth-child(4n + 1) {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+.room-gallery-tile:nth-child(4n + 2) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.room-gallery-tile:nth-child(4n + 3) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.room-gallery-tile:nth-child(4n + 4) {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+@media (max-width: 900px) {
+  .room-detail-body {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .room-detail-header {
+    padding: 2.5rem 1.3rem 2rem;
+  }
+  .room-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 160px;
+    gap: 0.7rem;
+    padding: 0 1.3rem;
+    margin-bottom: 4rem;
+  }
+  .room-gallery-tile:nth-child(4n + 1),
+  .room-gallery-tile:nth-child(4n + 4) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .room-gallery-tile:nth-child(4n + 2),
+  .room-gallery-tile:nth-child(4n + 3) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
 /* ---------------- RESTAURANT MENU COURSES ---------------- */
 .menu-course-section {
   max-width: 900px;
