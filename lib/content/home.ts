@@ -71,7 +71,7 @@ export const home: Record<Locale, HomeContent> = {
     kitchenImg: IMG.kitchen,
     kitchenText: [
       "Breakfast arrives slowly, beneath the vaulted ceiling of the old refectory: almond pastries from the village, fresh ricotta from a neighbouring farm, jams pressed from the estate's own fruit, eggs from the courtyard hens, our own olive oil on warm bread.",
-      "By arrangement, the kitchen will open in the evening — typical Murgian and Pugliese recipes, simply made with what the estate has given that day.",
+      "By arrangement, the kitchen will open for lunch and in the evening — typical Murgian and Pugliese recipes, simply made with what the estate has given that day.",
     ],
     kitchenCta: "The Veranda restaurant",
     fullPhoto: IMG.full,
