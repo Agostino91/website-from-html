@@ -166,7 +166,9 @@ a {
   background-position: center;
 }
 .hero--home {
-  background-image: url("https://res.cloudinary.com/amenitiz/image/upload/w_2400,q_auto:best,f_auto,c_fill,g_center/v1679928579/czk5bwys9xduwfefummm.jpg");
+  background-image: url("/hero-masseria-aerial.jpg");
+  background-size: 165%;
+  background-position: 42% 62%;
 }
 .hero--story {
   min-height: 640px;

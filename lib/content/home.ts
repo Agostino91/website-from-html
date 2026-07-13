@@ -36,10 +36,9 @@ const IMG = {
     "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748886624/hbchtblkcpiq0wppbbgo.jpg",
   deluxe:
     "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748887785/uunospsvhbmxd2bhnu27.jpg",
-  land: "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748365479/bao85el3tzzrazwmnjtl.jpg",
+  land: "/experiences-hikers.jpg",
   full: "https://res.cloudinary.com/amenitiz/image/upload/w_2400,q_auto:best,f_auto,c_fill/v1679928587/vt7xxd7g2xxn5sqk3mkt.jpg",
-  kitchen:
-    "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748888055/nxskbhvgtpuxzfoqavfb.jpg",
+  kitchen: "/kitchen-pomodori.jpg",
 }
 
 export const home: Record<Locale, HomeContent> = {
