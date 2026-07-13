@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { CurvedLabel } from "@/components/curved-label"
 import { Scopri } from "@/components/scopri"
 import { HeroVideo } from "@/components/hero-video"
-import { MapSvg } from "@/components/map-svg"
+import { PressStrip } from "@/components/press-strip"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { chrome, isLocale } from "@/lib/i18n"
 import { home } from "@/lib/content/home"
@@ -64,22 +64,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <HeroVideo videoId="qzT1XEFQ_FM" poster="/lamadiluna-courtyard-stars.jpg" label={c.videoLabel} />
       </section>
 
-      <section id="story">
-        <div className="text-image">
-          <div className="text-block">
-            {c.landText.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-            <Scopri href={`/${lang}/story`}>{c.landCta}</Scopri>
-          </div>
-          <div className="image-block" style={{ backgroundImage: `url('${c.landImg}')` }} />
-        </div>
-      </section>
-
-      <section>
-        <div className="full-photo" style={{ backgroundImage: `url('${c.fullPhoto}')` }} />
-      </section>
-
       <section>
         <CurvedLabel text={c.kitchenLabel} />
       </section>
@@ -91,8 +75,28 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             {c.kitchenText.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
-            <Scopri href={`/${lang}/experiences`}>{c.kitchenCta}</Scopri>
+            <Scopri href={`/${lang}/restaurant`}>{c.kitchenCta}</Scopri>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="full-photo" style={{ backgroundImage: `url('${c.fullPhoto}')` }} />
+      </section>
+
+      <section>
+        <CurvedLabel text={c.experiencesLabel} />
+      </section>
+
+      <section>
+        <div className="text-image">
+          <div className="text-block">
+            {c.experiencesText.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+            <Scopri href={`/${lang}/experiences`}>{c.experiencesCta}</Scopri>
+          </div>
+          <div className="image-block" style={{ backgroundImage: `url('${c.experiencesImg}')` }} />
         </div>
       </section>
 
@@ -101,25 +105,15 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       </section>
 
       <section className="where">
-        <div className="map-grid">
-          <MapSvg />
-          <div className="map-text">
-            {c.mapText.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-            <Scopri href={`/${lang}/contact`}>{c.mapCta}</Scopri>
-          </div>
+        <div className="where-text">
+          {c.mapText.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+          <Scopri href={`/${lang}/contact`}>{c.mapCta}</Scopri>
         </div>
       </section>
 
-      <section className="partners">
-        {c.partners.map((p) => (
-          <div className="partner" key={p.name}>
-            {p.name}
-            {p.note ? <em>{p.note}</em> : null}
-          </div>
-        ))}
-      </section>
+      <PressStrip locale={lang} />
 
       <NewsletterForm
         text={c.newsletterText}

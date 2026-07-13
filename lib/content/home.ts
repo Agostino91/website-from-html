@@ -1,7 +1,6 @@
 import type { Locale } from "@/lib/i18n"
 
 type Room = { name: string; desc: string; img: string }
-type Partner = { name: string; note?: string }
 
 export type HomeContent = {
   statementTitle: string
@@ -12,18 +11,18 @@ export type HomeContent = {
   roomsCta: string
   landLabel: string
   videoLabel: string
-  landText: string[]
-  landCta: string
-  landImg: string
-  fullPhoto: string
   kitchenLabel: string
   kitchenImg: string
   kitchenText: string[]
   kitchenCta: string
+  fullPhoto: string
+  experiencesLabel: string
+  experiencesImg: string
+  experiencesText: string[]
+  experiencesCta: string
   whereLabel: string
   mapText: string[]
   mapCta: string
-  partners: Partner[]
   newsletterText: string
   newsletterPlaceholder: string
   newsletterButton: string
@@ -72,33 +71,27 @@ export const home: Record<Locale, HomeContent> = {
     roomsCta: "Discover the rooms",
     landLabel: "Our Land",
     videoLabel: "Watch the film",
-    landText: [
-      "The estate spans 210 hectares of organic olive groves, almond groves and vineyards — all certified by AIAB-ICEA. The first cold-press oil of the season, the almond harvest in late summer, the wine still made on these grounds.",
-      "Hot water and heating come from 48 solar panels. Electricity from 400 photovoltaic panels. The masseria has lived without the grid for nearly two decades — quietly, gratefully, on the energy of the same sun that ripens the olives.",
-    ],
-    landCta: "The story",
-    landImg: IMG.land,
-    fullPhoto: IMG.full,
     kitchenLabel: "Our Kitchen",
     kitchenImg: IMG.kitchen,
     kitchenText: [
       "Breakfast arrives slowly, beneath the vaulted ceiling of the old refectory: almond pastries from the village, fresh ricotta from a neighbouring farm, jams pressed from the estate's own fruit, eggs from the courtyard hens, our own olive oil on warm bread.",
       "By arrangement, the kitchen will open in the evening — typical Murgian and Pugliese recipes, simply made with what the estate has given that day.",
     ],
-    kitchenCta: "Dining & experiences",
+    kitchenCta: "The Veranda restaurant",
+    fullPhoto: IMG.full,
+    experiencesLabel: "Experiences",
+    experiencesImg: IMG.land,
+    experiencesText: [
+      "Beyond the table, the estate opens itself to those who wish to explore. Walk the old drovers' paths through the Alta Murgia, ride out among the olive trees, or join the harvest when the season turns.",
+      "Guided tastings of our oil and wine, cooking beside the cook in the old refectory, stargazing from the courtyard — each experience is arranged quietly, in its own time.",
+    ],
+    experiencesCta: "Discover experiences",
     whereLabel: "Where We Are",
     mapText: [
       "Lama di Luna sits in the heart of the Alta Murgia National Park, in Contrada Lama di Luna near Andria — fifteen minutes from Castel del Monte, fifty-five from Bari airport, an hour from the Adriatic coast.",
       "An ideal base for Castel del Monte, Trani, Matera, Polignano a Mare, Alberobello and the long Pugliese coast — and equally well a place to arrive, settle in, and never leave.",
     ],
     mapCta: "How to reach us",
-    partners: [
-      { name: "National Geographic" },
-      { name: "Stanley Tucci", note: "Searching for Italy" },
-      { name: "Lonely Planet" },
-      { name: "AIAB · ICEA", note: "Certified organic" },
-      { name: "Tripadvisor", note: "Travellers' Choice" },
-    ],
     newsletterText: "Subscribe to our newsletter to stay close to the masseria.",
     newsletterPlaceholder: "Email address",
     newsletterButton: "Subscribe",
@@ -132,33 +125,27 @@ export const home: Record<Locale, HomeContent> = {
     roomsCta: "Scopri le camere",
     landLabel: "La Terra",
     videoLabel: "Guarda il film",
-    landText: [
-      "La tenuta si estende su 210 ettari di uliveti, mandorleti e vigneti biologici — tutti certificati AIAB-ICEA. Il primo olio spremuto a freddo della stagione, la raccolta delle mandorle a fine estate, il vino ancora prodotto su queste terre.",
-      "Acqua calda e riscaldamento arrivano da 48 pannelli solari. L'elettricità da 400 pannelli fotovoltaici. La masseria vive fuori dalla rete da quasi vent'anni — silenziosamente, con gratitudine, grazie all'energia dello stesso sole che matura le olive.",
-    ],
-    landCta: "La storia",
-    landImg: IMG.land,
-    fullPhoto: IMG.full,
     kitchenLabel: "La Cucina",
     kitchenImg: IMG.kitchen,
     kitchenText: [
       "La colazione arriva lenta, sotto la volta dell'antico refettorio: dolci alle mandorle del paese, ricotta fresca di una fattoria vicina, marmellate della frutta della tenuta, uova delle galline del cortile, il nostro olio d'oliva sul pane caldo.",
       "Su prenotazione, la cucina si apre la sera — ricette tipiche della Murgia e della Puglia, fatte semplicemente con ciò che la tenuta ha dato quel giorno.",
     ],
-    kitchenCta: "Ristorazione & esperienze",
+    kitchenCta: "Il ristorante The Veranda",
+    fullPhoto: IMG.full,
+    experiencesLabel: "Esperienze",
+    experiencesImg: IMG.land,
+    experiencesText: [
+      "Oltre la tavola, la tenuta si apre a chi desidera esplorare. Percorri gli antichi tratturi dell'Alta Murgia, cavalca tra gli ulivi o unisciti alla raccolta quando cambia la stagione.",
+      "Degustazioni guidate del nostro olio e del nostro vino, cucina accanto alla cuoca nell'antico refettorio, osservazione delle stelle dal cortile — ogni esperienza è organizzata con calma, nel suo tempo.",
+    ],
+    experiencesCta: "Scopri le esperienze",
     whereLabel: "Dove Siamo",
     mapText: [
       "Lama di Luna sorge nel cuore del Parco Nazionale dell'Alta Murgia, in Contrada Lama di Luna vicino Andria — quindici minuti da Castel del Monte, cinquantacinque dall'aeroporto di Bari, un'ora dalla costa adriatica.",
       "Una base ideale per Castel del Monte, Trani, Matera, Polignano a Mare, Alberobello e la lunga costa pugliese — e allo stesso modo un luogo dove arrivare, sistemarsi e non andarsene più.",
     ],
     mapCta: "Come raggiungerci",
-    partners: [
-      { name: "National Geographic" },
-      { name: "Stanley Tucci", note: "Searching for Italy" },
-      { name: "Lonely Planet" },
-      { name: "AIAB · ICEA", note: "Certificato biologico" },
-      { name: "Tripadvisor", note: "Travellers' Choice" },
-    ],
     newsletterText: "Iscriviti alla nostra newsletter per restare vicino alla masseria.",
     newsletterPlaceholder: "Indirizzo email",
     newsletterButton: "Iscriviti",

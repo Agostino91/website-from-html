@@ -5,8 +5,22 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer>
       <div className="footer-links">
-        <a href="#">{f.instagram}</a>
-        <a href="#">{f.facebook}</a>
+        <a href={f.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label={f.instagram} className="footer-social">
+          <span
+            className="press-mark"
+            role="img"
+            aria-hidden="true"
+            style={{ width: 20, height: 20, WebkitMaskImage: "url(/logos/instagram.svg)", maskImage: "url(/logos/instagram.svg)" }}
+          />
+        </a>
+        <a href={f.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label={f.facebook} className="footer-social">
+          <span
+            className="press-mark"
+            role="img"
+            aria-hidden="true"
+            style={{ width: 20, height: 20, WebkitMaskImage: "url(/logos/facebook.svg)", maskImage: "url(/logos/facebook.svg)" }}
+          />
+        </a>
         <a href="#">{f.tripadvisor}</a>
         <a href="#">{f.privacy}</a>
         <a href="#">{f.cookies}</a>

@@ -285,14 +285,14 @@ section {
   color: var(--ink);
 }
 .statement-body {
-  max-width: 720px;
+  max-width: 1300px;
   margin-top: 3rem;
-  font-size: 15px;
-  line-height: 1.85;
+  font-size: 17px;
+  line-height: 1.95;
   color: var(--ink);
 }
 .statement-body p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 .statement-inner {
   max-width: 1300px;
@@ -304,7 +304,7 @@ section {
 .curved-label {
   position: relative;
   text-align: center;
-  padding: 2.5rem 0 0;
+  padding: 3rem 0 3rem;
 }
 .curved-label-text {
   display: inline-block;
@@ -902,61 +902,96 @@ section {
   aspect-ratio: 5/6;
 }
 
-/* ---------------- MAP / WHERE ---------------- */
+/* ---------------- WHERE ---------------- */
 .where {
-  padding: 4rem 0 6rem;
+  padding: 0 0 6rem;
 }
-.map-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  padding: 0 2.5rem;
-  max-width: 1500px;
+.where-text {
+  max-width: 1300px;
   margin: 0 auto;
-}
-.map-svg {
-  width: 100%;
-  height: auto;
-  max-width: 580px;
-}
-.map-text {
-  font-size: 15px;
-  line-height: 1.85;
-  max-width: 480px;
+  padding: 0 2.5rem;
+  font-size: 19px;
+  line-height: 1.9;
   color: var(--ink);
 }
-.map-text p {
-  margin-bottom: 1rem;
+.where-text p {
+  margin-bottom: 1.4rem;
+  max-width: 1100px;
 }
 
-/* ---------------- PARTNERS / PRESS ---------------- */
-.partners {
-  padding: 6rem 0 6rem;
+/* ---------------- PRESS / AS FEATURED IN ---------------- */
+.press {
+  padding: 5rem 2.5rem 6rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.6rem;
+}
+.press-eyebrow {
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.press-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 3.5rem 4rem;
   flex-wrap: wrap;
 }
-.partner {
+/* mono SVG logos recoloured to ink */
+.press-mark {
+  display: inline-block;
+  background-color: var(--ink);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.press-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.press-wordmark {
   font-family: var(--serif);
-  font-size: 11px;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.04em;
   color: var(--ink);
   opacity: 0.85;
-  text-align: center;
-  line-height: 1.6;
+  white-space: nowrap;
 }
-.partner em {
-  display: block;
+.press-wordmark--serif {
   font-style: italic;
-  letter-spacing: 0.05em;
+}
+.press-lonely {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+/* National Geographic — iconic framed wordmark */
+.press-natgeo {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border: 2px solid var(--ink);
+  max-width: 132px;
+  opacity: 0.85;
+}
+.press-natgeo span {
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  color: var(--ink);
   text-transform: none;
-  font-size: 11px;
-  margin-top: 4px;
-  opacity: 0.7;
 }
 
 /* ---------------- NEWSLETTER ---------------- */
@@ -1039,10 +1074,21 @@ footer {
 .footer-links {
   display: flex;
   gap: 1.8rem;
-}
-.footer-links a:hover {
+  align-items: center;
+  }
+  .footer-links a:hover {
   opacity: 0.6;
-}
+  }
+  .footer-social {
+  display: inline-flex;
+  align-items: center;
+  }
+  .footer-social .press-mark {
+  opacity: 1;
+  }
+  .footer-social:hover .press-mark {
+  opacity: 0.6;
+  }
 .footer-right {
   display: flex;
   gap: 1.8rem;
@@ -2399,14 +2445,16 @@ footer {
   .text-image .text-block {
     max-width: none;
   }
-  .map-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1.3rem;
+  .where-text {
+  font-size: 17px;
+  padding: 0 1.3rem;
   }
-  .partners {
-    gap: 2.5rem;
-    padding: 4rem 1.3rem;
+  .press {
+  gap: 2rem;
+  padding: 4rem 1.3rem;
+  }
+  .press-row {
+  gap: 2.2rem 2.5rem;
   }
   .newsletter-row {
     grid-template-columns: 1fr;
