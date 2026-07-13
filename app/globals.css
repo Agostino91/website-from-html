@@ -93,8 +93,8 @@ a {
 .brand-mark {
   display: block;
   margin: 0 auto;
-  width: 78px;
-  height: 73px;
+  width: 117px;
+  height: 110px;
   background-color: currentColor;
   -webkit-mask: url("/logo-lama-di-luna.svg") center / contain no-repeat;
   mask: url("/logo-lama-di-luna.svg") center / contain no-repeat;
@@ -300,19 +300,15 @@ section {
   padding: 0 2.5rem;
 }
 
-/* ---------------- CURVED LABEL ---------------- */
+/* ---------------- SECTION LABEL ---------------- */
 .curved-label {
   position: relative;
   text-align: center;
   padding: 2.5rem 0 0;
 }
-.curved-label svg {
-  display: block;
-  margin: 0 auto;
-  height: auto;
-}
 .curved-label-text {
-  fill: var(--ink);
+  display: inline-block;
+  color: var(--ink);
   font-family: var(--serif);
   font-size: 24px;
   letter-spacing: 12px;
@@ -2375,9 +2371,9 @@ footer {
     padding: 0 1rem;
     height: 74px;
   }
-  .brand-mark {
-    width: 64px;
-    height: 60px;
+.brand-mark {
+  width: 96px;
+  height: 90px;
   }
   .statement {
     padding: 9vh 0 9vh;
