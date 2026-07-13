@@ -12,22 +12,24 @@ export type MenuItem = { label: string; slug: string | null }
 
 export const menu: Record<Locale, MenuItem[]> = {
   en: [
-    { label: "Rooms", slug: "rooms" },
-    { label: "Experiences", slug: "experiences" },
-    { label: "Our Story", slug: "story" },
-    { label: "Restaurant", slug: "restaurant" },
+    { label: "Stay", slug: "rooms" },
+    { label: "Taste", slug: "restaurant" },
+    { label: "Explore", slug: "experiences" },
+    { label: "The Farm", slug: "farm" },
+    { label: "Story", slug: "story" },
+    { label: "Whole Masseria", slug: "exclusive" },
     { label: "Shop", slug: "shop" },
     { label: "Contact", slug: "contact" },
-    { label: "Masseria in exclusive", slug: "exclusive" },
   ],
   it: [
-    { label: "Camere", slug: "rooms" },
-    { label: "Esperienze", slug: "experiences" },
-    { label: "La nostra storia", slug: "story" },
-    { label: "Ristorante", slug: "restaurant" },
+    { label: "Soggiorna", slug: "rooms" },
+    { label: "Gusta", slug: "restaurant" },
+    { label: "Esplora", slug: "experiences" },
+    { label: "La Fattoria", slug: "farm" },
+    { label: "Storia", slug: "story" },
+    { label: "Masseria Intera", slug: "exclusive" },
     { label: "Shop", slug: "shop" },
     { label: "Contatti", slug: "contact" },
-    { label: "Masseria in esclusiva", slug: "exclusive" },
   ],
 }
 
