@@ -46,7 +46,7 @@ export const home: Record<Locale, HomeContent> = {
       "Let time stand still at Lama di Luna, our Valley of the Moon.",
     ],
     discover: "Read our story",
-    roomsLabel: "Stay",
+    roomsLabel: "Stay at our home",
     rooms: [
       {
         name: "Coloni",
@@ -65,9 +65,9 @@ export const home: Record<Locale, HomeContent> = {
       },
     ],
     roomsCta: "Discover the rooms",
-    landLabel: "Story",
+    landLabel: "Our story",
     videoLabel: "Watch the film",
-    kitchenLabel: "Taste",
+    kitchenLabel: "Taste our food",
     kitchenImg: IMG.kitchen,
     kitchenText: [
       "Breakfast arrives slowly, beneath the vaulted ceiling of the old refectory: almond pastries from the village, fresh ricotta from a neighbouring farm, jams pressed from the estate's own fruit, eggs from the courtyard hens, our own olive oil on warm bread.",
@@ -75,7 +75,7 @@ export const home: Record<Locale, HomeContent> = {
     ],
     kitchenCta: "The Veranda restaurant",
     fullPhoto: IMG.full,
-    experiencesLabel: "Experience",
+    experiencesLabel: "Experience our territory",
     experiencesImg: IMG.land,
     experiencesText: [
       "Beyond the table, the estate opens itself to those who wish to explore. Walk the old drovers' paths through the Alta Murgia, ride out among the olive trees, or join the harvest when the season turns.",
