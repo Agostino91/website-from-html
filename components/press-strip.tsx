@@ -38,11 +38,8 @@ export function PressStrip({ locale }: { locale: Locale }) {
         {/* Lonely Planet */}
         <span className="press-wordmark press-lonely">Lonely Planet</span>
 
-        {/* Tripadvisor */}
-        <span className="press-pair">
-          <MaskLogo src="/logos/tripadvisor.svg" label="Tripadvisor" width={26} />
-          <span className="press-wordmark">Tripadvisor</span>
-        </span>
+        {/* The Guardian */}
+        <span className="press-wordmark press-guardian">The Guardian</span>
       </div>
     </section>
   )

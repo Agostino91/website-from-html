@@ -995,6 +995,11 @@ section {
 .press-wordmark--serif {
   font-style: italic;
 }
+.press-guardian {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 18px;
+}
 .press-lonely {
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -1099,6 +1104,7 @@ footer {
   display: flex;
   gap: 1.8rem;
   align-items: center;
+  padding-left: 5rem;
   }
   .footer-links a:hover {
   opacity: 0.6;

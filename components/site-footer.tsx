@@ -21,7 +21,14 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             style={{ width: 20, height: 20, WebkitMaskImage: "url(/logos/facebook.svg)", maskImage: "url(/logos/facebook.svg)" }}
           />
         </a>
-        <a href="#">{f.tripadvisor}</a>
+        <a href={f.tripadvisorUrl} target="_blank" rel="noopener noreferrer" aria-label={f.tripadvisor} className="footer-social">
+          <span
+            className="press-mark"
+            role="img"
+            aria-hidden="true"
+            style={{ width: 20, height: 20, WebkitMaskImage: "url(/logos/tripadvisor.svg)", maskImage: "url(/logos/tripadvisor.svg)" }}
+          />
+        </a>
         <a href="#">{f.privacy}</a>
         <a href="#">{f.cookies}</a>
       </div>
