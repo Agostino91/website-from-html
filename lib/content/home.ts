@@ -32,11 +32,10 @@ export type HomeContent = {
 const IMG = {
   coloni:
     "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748883380/wmqlr3wb2j77th21ud8s.jpg",
-  murgia: "/room-murgia.png",
-  deluxe:
-    "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748887785/uunospsvhbmxd2bhnu27.jpg",
+  murgia: "/room-murgia-real.jpg",
+  deluxe: "/room-suite-deluxe.jpg",
   land: "/experiences-hikers.jpg",
-  full: "https://res.cloudinary.com/amenitiz/image/upload/w_2400,q_auto:best,f_auto,c_fill/v1679928587/vt7xxd7g2xxn5sqk3mkt.jpg",
+  full: "/pool-sunset.jpg",
   kitchen: "/kitchen-pomodori.jpg",
 }
 
