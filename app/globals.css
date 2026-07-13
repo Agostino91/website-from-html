@@ -986,6 +986,15 @@ section {
   align-items: center;
   gap: 0.85rem;
 }
+.press-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.press-link:hover {
+  opacity: 0.55;
+}
 .press-wordmark {
   font-family: var(--serif);
   font-size: 15px;

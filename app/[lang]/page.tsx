@@ -98,7 +98,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           </div>
           <div
             className="image-block"
-            style={{ backgroundImage: `url('${c.experiencesImg}')`, backgroundPosition: "20% center" }}
+            style={{ backgroundImage: `url('${c.experiencesImg}')`, backgroundPosition: "38% center" }}
           />
         </div>
       </section>
