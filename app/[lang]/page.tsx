@@ -89,7 +89,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       </section>
 
       <section>
-        <div className="text-image">
+        <div className="text-image text-image--flush">
           <div className="text-block">
             {c.experiencesText.map((p, i) => (
               <p key={i}>{p}</p>

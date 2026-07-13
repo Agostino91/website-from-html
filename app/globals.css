@@ -1067,6 +1067,9 @@ section {
   background-size: cover;
   background-position: center;
 }
+.text-image.text-image--flush {
+  padding-bottom: 0 !important;
+}
 .text-image.reverse {
   direction: rtl;
 }
