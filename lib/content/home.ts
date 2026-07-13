@@ -32,7 +32,7 @@ export type HomeContent = {
 const IMG = {
   coloni: "/room-coloni.jpg",
   murgia: "/room-suite-deluxe.jpg",
-  deluxe: "/room-murgia-real.jpg",
+  deluxe: "/room-suite-deluxe-entrance.jpg",
   land: "/experiences-hikers.jpg",
   full: "/pool-sunset.jpg",
   kitchen: "/kitchen-pomodori.jpg",
