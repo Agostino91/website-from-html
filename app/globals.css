@@ -271,7 +271,7 @@ section {
 
 /* ---------------- STATEMENT SECTION ---------------- */
 .statement {
-  padding: 12vh 0 14vh;
+  padding: 8vh 0 7vh;
   text-align: left;
 }
 .statement h1 {
@@ -304,21 +304,11 @@ section {
 .curved-label {
   position: relative;
   text-align: center;
-  padding: 6rem 0 4rem;
+  padding: 2.5rem 0 0;
 }
 .curved-label svg {
   display: block;
   margin: 0 auto;
-}
-.curved-label .arch-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50%;
-  margin-top: 0;
-}
-.curved-label .arch-logo svg {
-  width: 38px;
   height: auto;
 }
 .curved-label-text {
@@ -372,7 +362,7 @@ section {
 }
 .rooms-cta {
   text-align: left;
-  padding: 4rem 2.5rem 8rem;
+  padding: 2.5rem 2.5rem 3.5rem;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -782,18 +772,68 @@ section {
   }
 }
 
-/* ---------------- 2-UP PHOTO SPLIT ---------------- */
-.photo-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+/* ---------------- HERO VIDEO ---------------- */
+.hero-video {
+  position: relative;
   width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--ink);
+  overflow: hidden;
 }
-.photo-split-img {
+.hero-video-frame,
+.hero-video-poster {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 4/5;
+  height: 100%;
+  border: none;
+}
+.hero-video-poster {
   background-size: cover;
   background-position: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  color: var(--bg);
+}
+.hero-video-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 24, 30, 0.28);
+  transition: background 0.3s ease;
+}
+.hero-video-poster:hover::after {
+  background: rgba(20, 24, 30, 0.4);
+}
+.hero-video-play {
+  position: relative;
+  z-index: 1;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 1px solid rgba(246, 241, 230, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  background: rgba(20, 24, 30, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.hero-video-poster:hover .hero-video-play {
+  transform: scale(1.06);
+  background: rgba(20, 24, 30, 0.35);
+}
+.hero-video-label {
+  position: relative;
+  z-index: 1;
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
 }
 
 /* ---------------- FULL-WIDTH PHOTO ---------------- */
@@ -2382,11 +2422,9 @@ footer {
     align-items: flex-start;
     padding: 2rem 1.3rem;
   }
-  .photo-split {
-    grid-template-columns: 1fr;
-  }
-  .photo-split-img {
-    aspect-ratio: 4/3;
+  .hero-video-play {
+    width: 60px;
+    height: 60px;
   }
   .full-photo {
     aspect-ratio: 4/3;

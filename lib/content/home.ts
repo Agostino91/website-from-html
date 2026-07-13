@@ -11,7 +11,7 @@ export type HomeContent = {
   rooms: Room[]
   roomsCta: string
   landLabel: string
-  photoSplit: [string, string]
+  videoLabel: string
   landText: string[]
   landCta: string
   landImg: string
@@ -37,10 +37,6 @@ const IMG = {
     "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748886624/hbchtblkcpiq0wppbbgo.jpg",
   deluxe:
     "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748887785/uunospsvhbmxd2bhnu27.jpg",
-  split1:
-    "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748888083/omou7cxhd8opgelkbeuz.jpg",
-  split2:
-    "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1679928582/brqp64y9q5oogzmppcja.jpg",
   land: "https://res.cloudinary.com/amenitiz/image/upload/w_1400,q_auto:best,f_auto,c_fill/v1748365479/bao85el3tzzrazwmnjtl.jpg",
   full: "https://res.cloudinary.com/amenitiz/image/upload/w_2400,q_auto:best,f_auto,c_fill/v1679928587/vt7xxd7g2xxn5sqk3mkt.jpg",
   kitchen:
@@ -75,7 +71,7 @@ export const home: Record<Locale, HomeContent> = {
     ],
     roomsCta: "Discover the rooms",
     landLabel: "Our Land",
-    photoSplit: [IMG.split1, IMG.split2],
+    videoLabel: "Watch the film",
     landText: [
       "The estate spans 210 hectares of organic olive groves, almond groves and vineyards — all certified by AIAB-ICEA. The first cold-press oil of the season, the almond harvest in late summer, the wine still made on these grounds.",
       "Hot water and heating come from 48 solar panels. Electricity from 400 photovoltaic panels. The masseria has lived without the grid for nearly two decades — quietly, gratefully, on the energy of the same sun that ripens the olives.",
@@ -135,7 +131,7 @@ export const home: Record<Locale, HomeContent> = {
     ],
     roomsCta: "Scopri le camere",
     landLabel: "La Terra",
-    photoSplit: [IMG.split1, IMG.split2],
+    videoLabel: "Guarda il film",
     landText: [
       "La tenuta si estende su 210 ettari di uliveti, mandorleti e vigneti biologici — tutti certificati AIAB-ICEA. Il primo olio spremuto a freddo della stagione, la raccolta delle mandorle a fine estate, il vino ancora prodotto su queste terre.",
       "Acqua calda e riscaldamento arrivano da 48 pannelli solari. L'elettricità da 400 pannelli fotovoltaici. La masseria vive fuori dalla rete da quasi vent'anni — silenziosamente, con gratitudine, grazie all'energia dello stesso sole che matura le olive.",

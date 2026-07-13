@@ -3,6 +3,7 @@ import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { CurvedLabel } from "@/components/curved-label"
 import { Scopri } from "@/components/scopri"
+import { HeroVideo } from "@/components/hero-video"
 import { MapSvg } from "@/components/map-svg"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { chrome, isLocale } from "@/lib/i18n"
@@ -60,10 +61,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       </section>
 
       <section>
-        <div className="photo-split">
-          <div className="photo-split-img" style={{ backgroundImage: `url('${c.photoSplit[0]}')` }} />
-          <div className="photo-split-img" style={{ backgroundImage: `url('${c.photoSplit[1]}')` }} />
-        </div>
+        <HeroVideo videoId="qzT1XEFQ_FM" poster="/lamadiluna-courtyard-stars.png" label={c.videoLabel} />
       </section>
 
       <section id="story">
