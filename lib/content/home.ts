@@ -32,8 +32,7 @@ export type HomeContent = {
 const IMG = {
   coloni:
     "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748883380/wmqlr3wb2j77th21ud8s.jpg",
-  family:
-    "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748886624/hbchtblkcpiq0wppbbgo.jpg",
+  murgia: "/room-murgia.png",
   deluxe:
     "https://res.cloudinary.com/amenitiz/image/upload/w_1200,q_auto:best,f_auto,c_fill/v1748887785/uunospsvhbmxd2bhnu27.jpg",
   land: "/experiences-hikers.jpg",
@@ -57,9 +56,9 @@ export const home: Record<Locale, HomeContent> = {
         img: IMG.coloni,
       },
       {
-        name: "Family Suite",
-        desc: "Spacious quarters for families — solid pine and olive-wood beds, a fireplace for cool evenings, walls painted with the red earth of the surrounding fields.",
-        img: IMG.family,
+        name: "Murgia",
+        desc: "Named for the wild uplands beyond the walls, the Murgia room looks out over the olive groves and open countryside. Whitewashed stone, a vaulted ceiling, wrought-iron bed and natural linen — quiet and full of light.",
+        img: IMG.murgia,
       },
       {
         name: "Suite Deluxe",
@@ -111,9 +110,9 @@ export const home: Record<Locale, HomeContent> = {
         img: IMG.coloni,
       },
       {
-        name: "Family Suite",
-        desc: "Ampi spazi per le famiglie — letti in pino massello e legno d'ulivo, un camino per le sere fresche, pareti dipinte con la terra rossa dei campi circostanti.",
-        img: IMG.family,
+        name: "Murgia",
+        desc: "Dedicata agli altopiani selvaggi oltre le mura, la camera Murgia si affaccia sugli uliveti e sulla campagna aperta. Pietra imbiancata a calce, volta a botte, letto in ferro battuto e lino naturale — silenziosa e piena di luce.",
+        img: IMG.murgia,
       },
       {
         name: "Suite Deluxe",
