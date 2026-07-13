@@ -64,7 +64,12 @@ export const rooms: Record<"en" | "it", RoomsContent> = {
         ],
         details: ["Sleeps 2", "Open fireplace", "1800s brass bed", "Courtyard view", "Solar power"],
         img: IMG.coloni,
-        gallery: [IMG.coloni, IMG.entrance, IMG.estate, IMG.pool],
+        gallery: [
+          "/rooms/coloni-1.jpg",
+          "/rooms/coloni-2.jpg",
+          "/rooms/coloni-3.jpg",
+          "/rooms/coloni-4.jpg",
+        ],
       },
       {
         slug: "murgia",
@@ -79,7 +84,13 @@ export const rooms: Record<"en" | "it", RoomsContent> = {
         ],
         details: ["Sleeps 2", "Vaulted ceiling", "Olive-wood bed", "North light", "Solar power"],
         img: IMG.murgia,
-        gallery: [IMG.murgia, IMG.estate, IMG.pool, IMG.entrance],
+        gallery: [
+          "/rooms/murgia-1.jpg",
+          "/rooms/murgia-2.jpg",
+          "/rooms/murgia-3.jpg",
+          "/rooms/murgia-4.jpg",
+          "/rooms/murgia-5.jpg",
+        ],
       },
       {
         slug: "family-suite",
@@ -94,7 +105,13 @@ export const rooms: Record<"en" | "it", RoomsContent> = {
         ],
         details: ["Sleeps 4", "Two connecting rooms", "Garden access", "Solid pine beds", "Shared bathroom"],
         img: IMG.familySuite,
-        gallery: [IMG.familySuite, IMG.estate, IMG.pool, IMG.kitchen],
+        gallery: [
+          "/rooms/family-suite-1.jpg",
+          "/rooms/family-suite-2.jpg",
+          "/rooms/family-suite-3.jpg",
+          "/rooms/family-suite-4.jpg",
+          "/rooms/family-suite-5.jpg",
+        ],
       },
       {
         slug: "masseria",
@@ -153,7 +170,12 @@ export const rooms: Record<"en" | "it", RoomsContent> = {
         ],
         details: ["Per 2", "Camino aperto", "Letto in ottone dell'Ottocento", "Vista sulla corte", "Energia solare"],
         img: IMG.coloni,
-        gallery: [IMG.coloni, IMG.entrance, IMG.estate, IMG.pool],
+        gallery: [
+          "/rooms/coloni-1.jpg",
+          "/rooms/coloni-2.jpg",
+          "/rooms/coloni-3.jpg",
+          "/rooms/coloni-4.jpg",
+        ],
       },
       {
         slug: "murgia",
@@ -168,7 +190,13 @@ export const rooms: Record<"en" | "it", RoomsContent> = {
         ],
         details: ["Per 2", "Volta a botte", "Letto in ulivo", "Luce da nord", "Energia solare"],
         img: IMG.murgia,
-        gallery: [IMG.murgia, IMG.estate, IMG.pool, IMG.entrance],
+        gallery: [
+          "/rooms/murgia-1.jpg",
+          "/rooms/murgia-2.jpg",
+          "/rooms/murgia-3.jpg",
+          "/rooms/murgia-4.jpg",
+          "/rooms/murgia-5.jpg",
+        ],
       },
       {
         slug: "family-suite",
@@ -183,7 +211,13 @@ export const rooms: Record<"en" | "it", RoomsContent> = {
         ],
         details: ["Per 4", "Due camere comunicanti", "Accesso al giardino", "Letti in pino massello", "Bagno condiviso"],
         img: IMG.familySuite,
-        gallery: [IMG.familySuite, IMG.estate, IMG.pool, IMG.kitchen],
+        gallery: [
+          "/rooms/family-suite-1.jpg",
+          "/rooms/family-suite-2.jpg",
+          "/rooms/family-suite-3.jpg",
+          "/rooms/family-suite-4.jpg",
+          "/rooms/family-suite-5.jpg",
+        ],
       },
       {
         slug: "masseria",
