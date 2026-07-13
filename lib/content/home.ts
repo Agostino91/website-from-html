@@ -84,7 +84,7 @@ export const home: Record<Locale, HomeContent> = {
     experiencesCta: "Discover experiences",
     whereLabel: "Where We Are",
     mapText: [
-      "Lama di Luna sits in the heart of the Alta Murgia National Park, in Contrada Lama di Luna near Andria — fifteen minutes from Castel del Monte, fifty-five from Bari airport, an hour from the Adriatic coast. An ideal base for Castel del Monte, Trani, Matera, Polignano a Mare, Alberobello and the long Pugliese coast — and equally well a place to arrive, settle in, and never leave.",
+      "Lama di Luna sits at the border of the Alta Murgia National Park, in Contrada Lama di Luna near Andria — fifteen minutes from Castel del Monte, fifty-five from Bari airport, and twenty minutes from the Adriatic coast. An ideal base for visiting Castel del Monte, Trani, Matera, Polignano a Mare, Alberobello and the long Pugliese coast — and equally well a place to arrive, settle in, and never leave.",
     ],
     mapCta: "How to reach us",
     newsletterText: "Subscribe to our newsletter to stay close to the masseria.",
