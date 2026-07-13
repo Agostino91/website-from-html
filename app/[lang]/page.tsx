@@ -61,7 +61,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       </section>
 
       <section>
-        <HeroVideo videoId="qzT1XEFQ_FM" poster="/lamadiluna-courtyard-stars.png" label={c.videoLabel} />
+        <HeroVideo videoId="qzT1XEFQ_FM" poster="/lamadiluna-courtyard-stars.jpg" label={c.videoLabel} />
       </section>
 
       <section id="story">
