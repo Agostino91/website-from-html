@@ -91,9 +91,6 @@ export default async function StoryPage({ params }: { params: Promise<{ lang: st
         <div className="details-grid">
           {c.details.map((d) => (
             <div className="detail-item" key={d.title}>
-              <div className="detail-num detail-num--hidden" aria-hidden="true">
-                {d.num}
-              </div>
               <div className="detail-body">
                 <h3>{d.title}</h3>
                 <p>{d.body}</p>

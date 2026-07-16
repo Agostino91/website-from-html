@@ -1032,10 +1032,6 @@ section {
   color: var(--olive);
   margin-bottom: 0.8rem;
 }
-.num--hidden,
-.detail-num--hidden {
-  visibility: hidden;
-}
 .exclusive-perk h3 {
   font-family: var(--serif);
   font-size: 20px;
@@ -2740,7 +2736,7 @@ footer {
   padding: 2.2rem 2rem;
   border-top: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 1fr;
   gap: 1.6rem;
   align-items: start;
 }
