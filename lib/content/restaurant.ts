@@ -126,10 +126,6 @@ export const restaurant: Record<Locale, RestaurantContent> = {
         name: "Secondo",
         desc: "Agnello della Murgia cotto lentamente con mandorle ed erbe, o verdure di stagione al forno dall'orto della tenuta.",
       },
-      {
-        name: "Per chiudere",
-        desc: "Dolci alle mandorle, frutta della tenuta, un calice del nostro vino o un amaro di erbe murgiane.",
-      },
     ],
     photos: [IMG.photo1, IMG.photo2],
     sourcingEyebrow: "Dalla tenuta",
