@@ -2,7 +2,6 @@ import { notFound } from "next/navigation"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { CurvedLabel } from "@/components/curved-label"
-import { FilmSection } from "@/components/film-section"
 import Link from "next/link"
 import { chrome, isLocale } from "@/lib/i18n"
 import { story, YOUTUBE_ID } from "@/lib/content/story"
@@ -83,12 +82,6 @@ export default async function StoryPage({ params }: { params: Promise<{ lang: st
           </div>
         </div>
       </section>
-
-      <section>
-        <CurvedLabel text={c.filmLabel} />
-      </section>
-
-      <FilmSection cta={c.filmCta} />
 
       <section className="details">
         <div className="details-header">
