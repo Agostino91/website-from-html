@@ -2522,8 +2522,8 @@ footer {
 }
 .find-us-intro p {
   width: 100%;
-  font-size: 17px;
-  line-height: 1.95;
+  font-size: 17px !important;
+  line-height: 1.95 !important;
   color: var(--ink);
 }
 .distance-list.distance-list--columns {
