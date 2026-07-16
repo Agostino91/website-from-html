@@ -2796,12 +2796,21 @@ footer {
     align-items: flex-start;
     padding: 2rem 1.3rem;
   }
+  .hero-video {
+    aspect-ratio: 4/5;
+  }
+  .hero-video-poster {
+    background-size: cover;
+    background-position: center;
+  }
   .hero-video-play {
     width: 60px;
     height: 60px;
   }
   .full-photo {
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/5;
+    background-size: cover;
+    background-position: center;
   }
   .page-header {
     padding: 7rem 1.3rem 2rem;
