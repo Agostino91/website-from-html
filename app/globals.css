@@ -2512,18 +2512,19 @@ footer {
 .map-section-inner.map-section-inner--destinations {
   display: block;
 }
-.map-intro--full {
+.find-us-intro {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2.5rem 2.5rem;
+}
+.find-us-intro .script-eyebrow {
+  margin-bottom: 0.75rem;
+}
+.find-us-intro p {
   width: 100%;
-  margin-bottom: 2rem;
-}
-.map-intro--full h2 {
-  max-width: none;
-  margin-bottom: 1rem;
-}
-.map-intro--full p {
-  max-width: none;
-  font-size: 14.5px;
-  line-height: 1.85;
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  line-height: 1.6;
   color: var(--ink);
 }
 .distance-list.distance-list--columns {
@@ -2950,6 +2951,9 @@ footer {
   grid-template-columns: 1fr;
   gap: 2.5rem;
   padding: 0 1.3rem;
+  }
+  .find-us-intro {
+    padding: 0 1.3rem 2rem;
   }
   .distance-list.distance-list--columns {
     gap: 0 1.25rem;

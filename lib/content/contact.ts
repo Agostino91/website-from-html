@@ -63,7 +63,7 @@ export const contact: Record<"en" | "it", ContactContent> = {
     successMessage: "Thanks — we'll reply within a few hours.",
     findLabel: "Find Us",
     mapEyebrow: "In the Alta Murgia",
-    mapTitle: "An hour from Bari, fifteen minutes from Castel del Monte",
+    mapTitle: "An hour from Bari, 50 minutes from Castel del Monte",
     mapBody:
       "A rented car is the easiest way to reach us. We can also arrange a private transfer from any airport or station — write to us in advance.",
     distances: [
@@ -106,7 +106,7 @@ export const contact: Record<"en" | "it", ContactContent> = {
     successMessage: "Grazie — risponderemo entro poche ore.",
     findLabel: "Dove Siamo",
     mapEyebrow: "Nell'Alta Murgia",
-    mapTitle: "Un'ora da Bari, quindici minuti da Castel del Monte",
+    mapTitle: "Un'ora da Bari, 50 minuti da Castel del Monte",
     mapBody:
       "Un'auto a noleggio è il modo più facile per raggiungerci. Possiamo anche organizzare un transfer privato da qualsiasi aeroporto o stazione — scrivici in anticipo.",
     distances: [
