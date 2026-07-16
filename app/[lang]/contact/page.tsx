@@ -3,7 +3,6 @@ import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { CurvedLabel } from "@/components/curved-label"
 import { ContactForm } from "@/components/contact-form"
-import { FindUsMap } from "@/components/find-us-map"
 import { QuickSearch } from "@/components/quick-search"
 import { isLocale } from "@/lib/i18n"
 import { contact } from "@/lib/content/contact"
@@ -107,23 +106,15 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       </section>
 
       <section className="map-section">
-        <div className="map-section-inner">
-          <div className="map-svg-wrap">
-            <FindUsMap />
-          </div>
-          <div className="map-text-block">
-            <div className="script-eyebrow">{c.mapEyebrow}</div>
-            <h2>{c.mapTitle}</h2>
-            <p style={{ fontSize: "14.5px", lineHeight: 1.85, color: "var(--ink)", maxWidth: 480 }}>{c.mapBody}</p>
-            <ul className="distance-list">
-              {c.distances.map((d) => (
-                <li key={d.place}>
-                  <span className="place">{d.place}</span>
-                  <span className="distance">{d.distance}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="map-section-inner map-section-inner--destinations">
+          <ul className="distance-list distance-list--columns">
+            {c.distances.map((d) => (
+              <li key={d.place}>
+                <span className="place">{d.place}</span>
+                <span className="distance">{d.distance}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
