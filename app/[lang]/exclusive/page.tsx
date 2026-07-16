@@ -59,9 +59,8 @@ export default async function ExclusivePage({ params }: { params: Promise<{ lang
       </section>
 
       <section className="exclusive-perks">
-        {c.perks.map((perk, i) => (
+        {c.perks.map((perk) => (
           <div className="exclusive-perk" key={perk.title}>
-            <div className="num">{String(i + 1).padStart(2, "0")}</div>
             <h3>{perk.title}</h3>
             <p>{perk.body}</p>
           </div>

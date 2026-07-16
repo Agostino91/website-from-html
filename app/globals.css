@@ -2735,10 +2735,7 @@ footer {
 .detail-item {
   padding: 2.2rem 2rem;
   border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 1.6rem;
-  align-items: start;
+  display: block;
 }
 .detail-item:nth-child(odd) {
   border-right: 1px solid var(--line);
