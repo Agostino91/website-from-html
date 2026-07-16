@@ -1955,26 +1955,25 @@ footer {
 }
 
 /* ---------------- AVAILABILITY PLACEMENTS ---------------- */
-.availability-placement--home {
+.quick-search.availability-placement--home {
   margin-top: -2rem;
   margin-bottom: 1rem;
 }
-.availability-placement--contact {
-  margin-top: -1rem;
-  margin-bottom: 1rem;
+.quick-search.availability-placement--contact {
+  margin-top: 0;
+  margin-bottom: 0 !important;
 }
-.availability-placement .quick-search {
-  margin-bottom: 0;
+.availability-placement--contact + .contact-section {
+  padding-top: 1.5rem !important;
 }
 
 @media (max-width: 700px) {
-  .availability-placement--home {
+  .quick-search.availability-placement--home {
     margin-top: -1rem;
     margin-bottom: 0;
   }
-  .availability-placement--contact {
-    margin-top: 0;
-    margin-bottom: 0;
+  .availability-placement--contact + .contact-section {
+    padding-top: 1rem;
   }
 }
 

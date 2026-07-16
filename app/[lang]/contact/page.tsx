@@ -24,6 +24,10 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
         <p>{c.intro}</p>
       </section>
 
+      <div className="quick-search availability-placement availability-placement--contact">
+        <QuickSearch labels={book[lang]} />
+      </div>
+
       <section className="contact-section">
         <div className="contact-grid">
           <div className="direct">
@@ -97,10 +101,6 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           />
         </div>
       </section>
-
-      <div className="availability-placement availability-placement--contact">
-        <QuickSearch labels={book[lang]} />
-      </div>
 
       <section>
         <CurvedLabel text={c.findLabel} />

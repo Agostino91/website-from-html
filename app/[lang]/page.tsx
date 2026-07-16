@@ -37,7 +37,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      <div className="availability-placement availability-placement--home">
+      <div className="quick-search availability-placement availability-placement--home">
         <QuickSearch labels={book[lang]} />
       </div>
 
