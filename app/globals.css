@@ -1165,7 +1165,7 @@ section {
   align-items: center;
   gap: 0.85rem;
 }
-.press-row > .press-link.press-pair:nth-of-type(2) {
+section.press:nth-of-type(14) > div.press-row > a.press-link.press-pair:nth-of-type(2) {
   gap: 0;
 }
 .press-link {
