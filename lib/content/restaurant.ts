@@ -71,10 +71,6 @@ export const restaurant: Record<Locale, RestaurantContent> = {
         name: "Main",
         desc: "Slow-cooked lamb from the Murgia with almonds and herbs, or baked seasonal vegetables from the estate garden.",
       },
-      {
-        name: "To close",
-        desc: "Almond dolci, estate fruit, a glass of our own wine or an amaro made from Murgian herbs.",
-      },
     ],
     photos: [IMG.photo1, IMG.photo2],
     sourcingEyebrow: "From the estate",
