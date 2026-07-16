@@ -47,7 +47,7 @@ export default async function StoryPage({ params }: { params: Promise<{ lang: st
       </section>
 
       <section>
-        <div className="text-image reverse">
+        <div className="text-image">
           <div className="image-block" style={{ backgroundImage: `url('${c.land.img}')` }} />
           <div className="text-block">
             <div className="script-eyebrow">{c.land.eyebrow}</div>
