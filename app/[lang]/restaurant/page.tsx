@@ -87,22 +87,6 @@ export default async function RestaurantPage({ params }: { params: Promise<{ lan
         <CurvedLabel text={c.curvedLabel} />
       </section>
 
-      <section className="menu-course-section">
-        <div className="menu-course-header">
-          <div className="script-eyebrow">{c.menuEyebrow}</div>
-          <h2>{c.menuTitle}</h2>
-          <p>{c.menuNote}</p>
-        </div>
-        <div className="menu-course-list">
-          {c.courses.map((course) => (
-            <div className="menu-course" key={course.name}>
-              <div className="menu-course-name">{course.name}</div>
-              <div className="menu-course-desc">{course.desc}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="photo-split">
         <div className="photo-split-img" style={{ backgroundImage: `url('${c.photos[0]}')` }} />
         <div className="photo-split-img" style={{ backgroundImage: `url('${c.photos[1]}')` }} />
