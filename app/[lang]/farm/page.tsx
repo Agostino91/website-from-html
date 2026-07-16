@@ -68,6 +68,9 @@ export default async function FarmPage({ params }: { params: Promise<{ lang: str
         <div className="details-grid">
           {c.principles.map((d) => (
             <div className="detail-item" key={d.title}>
+              <div className="detail-num detail-num--hidden" aria-hidden="true">
+                {d.num}
+              </div>
               <div className="detail-body">
                 <h3>{d.title}</h3>
                 <p>{d.body}</p>
