@@ -2512,6 +2512,20 @@ footer {
 .map-section-inner.map-section-inner--destinations {
   display: block;
 }
+.map-intro--full {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.map-intro--full h2 {
+  max-width: none;
+  margin-bottom: 1rem;
+}
+.map-intro--full p {
+  max-width: none;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink);
+}
 .distance-list.distance-list--columns {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;

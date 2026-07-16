@@ -107,6 +107,11 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
       <section className="map-section">
         <div className="map-section-inner map-section-inner--destinations">
+          <div className="map-intro map-intro--full">
+            <div className="script-eyebrow">{c.mapEyebrow}</div>
+            <h2>{c.mapTitle}</h2>
+            <p>{c.mapBody}</p>
+          </div>
           <ul className="distance-list distance-list--columns">
             {c.distances.map((d) => (
               <li key={d.place}>
