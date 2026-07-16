@@ -12,6 +12,8 @@ export type RestaurantContent = {
   statementTitle: string
   statementBody: string[]
   facts: Hour[]
+  mediaVideo: string
+  mediaPhotos: [string, string]
   curvedLabel: string
   menuEyebrow: string
   menuTitle: string
@@ -54,6 +56,8 @@ export const restaurant: Record<Locale, RestaurantContent> = {
       { label: "Seating", value: "One evening table" },
       { label: "Diets", value: "Vegetarian & vegan on request" },
     ],
+    mediaVideo: "/restaurant/food-making.mp4",
+    mediaPhotos: [IMG.photo1, IMG.photo2],
     curvedLabel: "At the Table",
     menuEyebrow: "A sample evening",
     menuTitle: "What the day gives",
@@ -103,6 +107,8 @@ export const restaurant: Record<Locale, RestaurantContent> = {
       { label: "Posti", value: "Un'unica tavola serale" },
       { label: "Diete", value: "Vegetariana e vegana su richiesta" },
     ],
+    mediaVideo: "/restaurant/food-making.mp4",
+    mediaPhotos: [IMG.photo1, IMG.photo2],
     curvedLabel: "A Tavola",
     menuEyebrow: "Una sera d'esempio",
     menuTitle: "Ciò che dà la giornata",

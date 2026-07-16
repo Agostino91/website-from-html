@@ -49,6 +49,40 @@ export default async function RestaurantPage({ params }: { params: Promise<{ lan
         </div>
       </section>
 
+      <section className="restaurant-media" aria-label={lang === "it" ? "Sapori di Lama di Luna" : "Flavours of Lama di Luna"}>
+        <div
+          className="restaurant-media-video-wrap"
+          style={{ backgroundImage: `url('${c.mediaPhotos[0]}')` }}
+        >
+          <video
+            className="restaurant-media-video"
+            src={c.mediaVideo}
+            poster={c.mediaPhotos[0]}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label={lang === "it" ? "Preparazione in cucina a Lama di Luna" : "Food preparation at Lama di Luna"}
+          />
+        </div>
+        <div className="restaurant-media-images">
+          {c.mediaPhotos.map((photo, index) => (
+            <div
+              className="restaurant-media-image"
+              style={{ backgroundImage: `url('${photo}')` }}
+              role="img"
+              aria-label={
+                lang === "it"
+                  ? `Cucina di Lama di Luna, immagine ${index + 1}`
+                  : `Lama di Luna food, image ${index + 1}`
+              }
+              key={photo}
+            />
+          ))}
+        </div>
+      </section>
+
       <section>
         <CurvedLabel text={c.curvedLabel} />
       </section>
