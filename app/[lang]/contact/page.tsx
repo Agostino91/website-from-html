@@ -4,8 +4,10 @@ import { SiteFooter } from "@/components/site-footer"
 import { CurvedLabel } from "@/components/curved-label"
 import { ContactForm } from "@/components/contact-form"
 import { FindUsMap } from "@/components/find-us-map"
+import { QuickSearch } from "@/components/quick-search"
 import { isLocale } from "@/lib/i18n"
 import { contact } from "@/lib/content/contact"
+import { book } from "@/lib/content/book"
 
 export default async function ContactPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
@@ -95,6 +97,10 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           />
         </div>
       </section>
+
+      <div className="availability-placement availability-placement--contact">
+        <QuickSearch labels={book[lang]} />
+      </div>
 
       <section>
         <CurvedLabel text={c.findLabel} />

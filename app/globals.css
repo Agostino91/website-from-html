@@ -1954,6 +1954,30 @@ footer {
   font-style: italic;
 }
 
+/* ---------------- AVAILABILITY PLACEMENTS ---------------- */
+.availability-placement--home {
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+}
+.availability-placement--contact {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+.availability-placement .quick-search {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .availability-placement--home {
+    margin-top: -1rem;
+    margin-bottom: 0;
+  }
+  .availability-placement--contact {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 /* ---------------- BOOK PAGE ---------------- */
 .quick-search {
   max-width: 1100px;
