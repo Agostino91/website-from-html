@@ -2,7 +2,6 @@ import { notFound } from "next/navigation"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { CurvedLabel } from "@/components/curved-label"
-import { FilmSection } from "@/components/film-section"
 import Link from "next/link"
 import { chrome, isLocale } from "@/lib/i18n"
 import { story, YOUTUBE_ID } from "@/lib/content/story"
@@ -48,7 +47,7 @@ export default async function StoryPage({ params }: { params: Promise<{ lang: st
       </section>
 
       <section>
-        <div className="text-image reverse">
+        <div className="text-image">
           <div className="image-block" style={{ backgroundImage: `url('${c.land.img}')` }} />
           <div className="text-block">
             <div className="script-eyebrow">{c.land.eyebrow}</div>
@@ -84,12 +83,6 @@ export default async function StoryPage({ params }: { params: Promise<{ lang: st
         </div>
       </section>
 
-      <section>
-        <CurvedLabel text={c.filmLabel} />
-      </section>
-
-      <FilmSection cta={c.filmCta} />
-
       <section className="details">
         <div className="details-header">
           <div className="script-eyebrow">{c.restorationEyebrow}</div>
@@ -97,8 +90,7 @@ export default async function StoryPage({ params }: { params: Promise<{ lang: st
         </div>
         <div className="details-grid">
           {c.details.map((d) => (
-            <div className="detail-item" key={d.num}>
-              <div className="detail-num">{d.num}</div>
+            <div className="detail-item" key={d.title}>
               <div className="detail-body">
                 <h3>{d.title}</h3>
                 <p>{d.body}</p>

@@ -12,7 +12,6 @@ function Card({ card, lang }: { card: ExpCard; lang: Locale }) {
       <div className="exp-card-img-wrap">
         <div className="exp-card-img" style={{ backgroundImage: `url('${card.img}')` }} />
       </div>
-      <div className="exp-card-num">{card.num}</div>
       <div className="exp-card-name">{card.name}</div>
       <div className="exp-card-meta">{card.meta}</div>
       <span className="exp-card-link">{lang === "it" ? "Scopri →" : "Discover →"}</span>
